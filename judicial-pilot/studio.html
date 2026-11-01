@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Decision studio · Judicial Practice Lab</title>
+<style>
+:root {
+  color-scheme: light;
+  --paper:#fbfaf6; --ink:#202e2c; --dim:#475d56; --edge:#c8d2c7;
+  --green:#185747; --pale:#e9f1e9; --rust:#8c441d; --amber:#fff3e5;
+  font: 100%/1.55 system-ui,sans-serif;
+}
+* {box-sizing:border-box} body {margin:0; background:var(--paper); color:var(--ink)}
+a {color:var(--green);text-underline-offset:.2em} button,select,textarea {font:inherit}
+button {border:1px solid var(--edge);border-radius:.38rem;background:white;padding:.56rem .85rem;cursor:pointer;color:var(--ink)}
+button:hover {border-color:var(--green)} button:disabled {opacity:.58;cursor:default}
+button.primary {background:var(--green);color:white;border-color:var(--green);font-weight:650}
+:focus-visible {outline:3px solid #a04a0b;outline-offset:3px}
+.resources {display:flex;gap:1rem;flex-wrap:wrap;font-size:.85rem}.skip {position:absolute;left:-9999px}.skip:focus {left:1rem;top:.5rem;padding:.6rem;background:white;z-index:2}
+header,main,footer {max-width:86rem;margin:auto;padding-inline:clamp(1rem,4vw,4rem)}
+header {display:flex;gap:1rem;justify-content:space-between;align-items:center;padding-block:1rem;border-bottom:1px solid var(--edge)}
+main {padding-block:1.6rem 3rem}footer {padding-block:1.1rem;border-top:1px solid var(--edge)}
+h1,h2 {font-family:Georgia,serif;font-weight:500;line-height:1.12;margin:.15em 0}
+h1 {font-size:clamp(2.4rem,5.7vw,4.2rem)}h2 {font-size:clamp(1.8rem,3.6vw,2.6rem)}
+h3,h4,p {margin:.55rem 0}h3 {font-size:1.27rem}h4 {font-size:1.05rem}
+.eyebrow {letter-spacing:.1em;text-transform:uppercase;font-size:.76rem;font-weight:750;color:var(--green)}
+.lede {max-width:65ch;font-size:1.1rem}.hint,footer {color:var(--dim);font-size:.9rem}
+.layout {display:grid;grid-template-columns:minmax(12rem,17rem) minmax(0,1fr);gap:1.5rem;align-items:start;margin-top:1.8rem}
+aside {border-top:2px solid var(--green);padding-top:.8rem}
+aside h2 {font:700 1.08rem system-ui,sans-serif}
+#list {display:grid;gap:.5rem;margin-top:.85rem}
+#list button {text-align:left;padding:.7rem;display:grid;gap:.25rem;line-height:1.35}
+#list small {color:var(--dim);font-size:.75rem}
+#list [aria-current="page"] {background:var(--pale);border-color:var(--green)}
+article {padding:clamp(1rem,3vw,2.25rem);border:1px solid var(--edge);background:white;border-radius:.6rem}
+article section,article details {margin:1.3rem 0} .step {border-top:1px solid var(--edge);padding-top:1.2rem}
+details {border:1px solid var(--edge);border-radius:.45rem;padding:.7rem .9rem;background:#f6f8f4}
+summary {cursor:pointer;font-weight:650}.facts {padding-left:1.3rem}.facts li {padding:.23rem 0}
+label {font-weight:650;display:block;margin:.7rem 0 .3rem}
+textarea,select {padding:.7rem;border:1px solid #86988c;border-radius:.35rem;background:white;color:var(--ink);max-width:100%}
+textarea {width:100%;min-height:8.3rem;resize:vertical}.why {min-height:3.7rem}
+.actions {display:flex;align-items:center;flex-wrap:wrap;gap:.65rem;margin-top:.7rem}
+blockquote {white-space:pre-wrap;background:var(--pale);border-left:3px solid var(--green);margin:.5rem 0;padding:.7rem .85rem}
+.panel {padding:.85rem 1rem;background:var(--amber);border-left:3px solid var(--rust);margin:1rem 0}
+fieldset {min-width:0;margin:.85rem 0;padding:.6rem .9rem .9rem;border:1px solid var(--edge);border-radius:.4rem}
+legend {font-weight:700;padding:0 .3rem} dl {display:grid;gap:.3rem .6rem;grid-template-columns:max-content 1fr;margin:.5rem 0}dt {font-weight:650}dd {margin:0}
+.review-row {border-left:3px solid var(--edge);padding-left:.85rem;margin:1rem 0}
+#notice:empty {display:none}#notice {margin-top:1rem;padding:.6rem .8rem;background:var(--pale)}
+p,li,blockquote,button,dd,legend,textarea {overflow-wrap:anywhere}
+@media(max-width:730px){.layout{grid-template-columns:1fr}#list{grid-template-columns:repeat(auto-fit,minmax(9rem,1fr))}header{align-items:flex-start}main{padding-block:1.1rem}}
+</style>
+</head>
+<body>
+<a class="skip" href="#workspace">Skip to case file</a>
+<header><div><strong>Judicial Practice Lab</strong><nav class="resources" aria-label="Learning resources"><a href="/">Random assessment</a><a href="/practice">Warm-ups</a><a href="/guide">Assessor guide</a><a href="/evaluation">Scoring diagnostics</a></nav></div><button type="button" id="export" disabled>Export session</button></header>
+<main>
+<div class="eyebrow">Indian judicial education · Practice</div><h1>Decision studio</h1>
+<p class="lede">Read the case file and commit to a direction. When the record changes, explain what you would preserve, vary or withdraw.</p>
+<p class="hint">Use fictional answers only. Drafts and reviews stay in this tab until refresh or close. Export before leaving. For a recorded frontier review, use the randomised assessment.</p>
+<div id="notice" role="status" aria-live="polite"></div>
+<div class="layout">
+<aside><h2>Case files</h2><p class="hint" id="progress">Opening library…</p><nav id="list" aria-label="Choose case file"></nav></aside>
+<article id="workspace" aria-label="Current case" tabindex="-1">Opening case file…</article>
+</div></main>
+<footer>Practice observations describe decisions in these fictional hearings. A clinician or judicial academy cannot determine fitness for office from this exercise.</footer>
+<script>
+'use strict';
+const records = new Map();
+let cases = [], selected = null;
+const byId = id => document.getElementById(id);
+function element(tag, text, cls) {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  if (cls) node.className = cls;
+  return node;
+}
+function button(text, fn, primary = false) {
+  const b = element('button', text, primary ? 'primary' : '');
+  b.type = 'button';
+  b.onclick = fn;
+  return b;
+}
+function announce(message) { byId('notice').textContent = message; }
+function facts(items) {
+  const ul = element('ul', undefined, 'facts');
+  for (const line of items) ul.append(element('li', line));
+  return ul;
+}
+function newRecord() {
+  return { initial:'', revision:'', reveal:null, key:null, human:[], savedAt:null, ai:null, busy:false, error:'' };
+}
+function stage(r) {
+  if (r.savedAt) return 'Review complete';
+  if (r.key) return 'Assessor review';
+  return r.reveal ? 'Changed facts' : 'Initial decision';
+}
+function navigation() {
+  const nav = byId('list');
+  nav.replaceChildren();
+  cases.forEach((c, i) => {
+    const b = button('', () => { selected = c.id; render(); byId('workspace').focus(); });
+    b.append(element('strong', c.title), element('small', 'File '+(i+1)+' · '+stage(records.get(c.id))));
+    b.setAttribute('aria-current', c.id === selected ? 'page' : 'false');
+    nav.append(b);
+  });
+  const complete = [...records.values()].filter(r => r.savedAt).length;
+  byId('progress').textContent = complete+' of '+cases.length+' human reviews complete';
+}
+async function api(path, data) {
+  const options = data ? {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)} : {};
+  const response = await fetch(path, options);
+  let result;
+  try { result = await response.json(); } catch { throw Error('The service returned an unreadable response. Try again.'); }
+  if (!response.ok || result.error) throw Error(result.error || 'The service is unavailable. Try again.');
+  return result;
+}
+async function run(c, r, operation) {
+  if (r.busy) return;
+  r.busy = true;
+  r.error = '';
+  render();
+  try { await operation(); } catch (err) { r.error = err.message || 'Request failed.'; }
+  finally {
+    r.busy = false;
+    if (selected === c.id) {
+      render();
+      byId('workspace').focus();
+    } else navigation();
+  }
+}
+function section(parent, label, title) {
+  const s = element('section', undefined, 'step');
+  s.append(element('div', label, 'eyebrow'), element('h3', title));
+  parent.append(s);
+  return s;
+}
+function transcript(parent, title, answer) {
+  const d = element('details');
+  d.append(element('summary',title), element('blockquote',answer));
+  parent.append(d);
+}
+function decision(parent, c, r, field, prompt, caption, operation) {
+  const label = element('label',prompt);
+  label.htmlFor = field;
+  const box = element('textarea');
+  box.id = field;
+  box.maxLength = 10000;
+  box.value = r[field];
+  box.disabled = r.busy;
+  const hint = element('p','Committing locks this answer for comparison with the next stage.', 'hint');
+  const submit = button(r.busy ? 'Working…' : caption, () => run(c, r, operation), true);
+  submit.disabled = r.busy || !r[field].trim();
+  box.oninput = () => { r[field] = box.value; submit.disabled = !box.value.trim() || r.busy; };
+  parent.append(label,box,hint,submit);
+}
+function validRating(row) {
+  return row && ['0','1','2','unassessable'].includes(row.rating) && !!row.reason.trim();
+}
+function review(parent, c, r) {
+  const s = section(parent,'03 / Independent review','Assess the two decisions');
+  s.append(element('p','For each criterion, assess the actual orders and their effects. Cite the words or omissions behind your rating. Use “Insufficient basis” when the exercise cannot distinguish the levels.'));
+  const save = button('Commit human review', () => {
+    if (!r.human.every(validRating)) return;
+    r.savedAt = new Date().toISOString();
+    render(); byId('workspace').focus(); announce('Human review committed. The debrief is now available.');
+  }, true);
+  save.disabled = !r.human.every(validRating);
+  for (const [i, k] of r.key.criteria.entries()) {
+    const row = r.human[i];
+    const field = element('fieldset');
+    field.append(element('legend',k.name));
+    const dl = element('dl');
+    for (const [level, anchor] of [[0,k.zero],[1,k.one],[2,k.two]]) dl.append(element('dt',String(level)),element('dd',anchor));
+    field.append(dl);
+    const label = element('label','Rating');
+    const select = element('select');
+    select.id = 'criterion-'+i; label.htmlFor = select.id;
+    for (const [value, name] of [['','Select…'],['0','0'],['1','1'],['2','2'],['unassessable','Insufficient basis']]) {
+      const opt = element('option',name); opt.value = value; select.append(opt);
+    }
+    select.value = row.rating;
+    const whyLabel = element('label','Evidence and reasoning');
+    const why = element('textarea',undefined,'why');
+    why.id = 'evidence-'+i; whyLabel.htmlFor = why.id; why.value = row.reason; why.maxLength=3000;
+    function change() { row.rating = select.value; row.reason = why.value; save.disabled = !r.human.every(validRating); }
+    select.onchange = change; why.oninput = change;
+    field.append(label, select, whyLabel, why); s.append(field);
+  }
+  s.append(save);
+}
+function results(parent, c, r) {
+  const s = section(parent,'03 / Committed assessment','Human observations');
+  for (const [i, k] of r.key.criteria.entries()) {
+    const row = r.human[i], box = element('div',undefined,'review-row');
+    const label = row.rating === 'unassessable' ? 'Insufficient basis' : 'Level '+row.rating+' of 2';
+    box.append(element('h4',k.name+' · '+label),element('p',row.reason)); s.append(box);
+  }
+  const d = r.key.debrief, discussion = section(parent,'04 / Conference','Discuss the decision');
+  discussion.append(element('h4','The competing duties'),element('p',d.tradeoff),
+    element('h4','Defensible alternatives'),facts(d.alternatives),
+    element('h4','How the order could fail'),element('p',d.failure),
+    element('h4','Carry it into the next hearing'),element('p',d.transfer));
+
+}
+function render() {
+  navigation();
+  const c = cases.find(item => item.id === selected), r = records.get(selected), w = byId('workspace');
+  w.replaceChildren();
+  announce(r.error);
+  w.append(element('div',c.domain,'eyebrow'),element('h2',c.title),element('p',c.role,'lede'));
+  const file = element('details'); file.open = !r.reveal;
+  file.append(element('summary','Initial record'),facts(c.record)); w.append(file);
+  if (!r.reveal) {
+    const s = section(w,'01 / On the bench','Issue an initial direction');
+    decision(s,c,r,'initial',c.firstTask,'Commit and open the next record',async () => {
+      const data = await api('/api/reveal',{id:c.id,initial:r.initial});
+      if (!Array.isArray(data.update) || !data.finalTask) throw Error('Incomplete record. Retry to open the next stage.');
+      r.reveal = data;
+    });
+    return;
+  }
+  const first = section(w,'01 / On the bench','First decision committed');
+  first.append(element('p',c.firstTask)); transcript(first,'Read your initial direction',r.initial);
+  const next = section(w,'02 / Record update','Return to the hearing');
+  next.append(facts(r.reveal.update));
+  if (!r.key) {
+    decision(next,c,r,'revision',r.reveal.finalTask,'Commit and open assessor review',async () => {
+      const data = await api('/api/debrief',{id:c.id,initial:r.initial,revision:r.revision});
+      if (!Array.isArray(data.criteria) || !data.criteria.length || !Array.isArray(data.debrief?.alternatives)) throw Error('Incomplete assessment guide. Please retry.');
+      r.key = data; r.human = data.criteria.map(() => ({rating:'',reason:''}));
+    });
+    return;
+  }
+  next.append(element('p',r.reveal.finalTask)); transcript(next,'Read your revised direction',r.revision);
+  if (r.savedAt) results(w,c,r); else review(w,c,r);
+}
+byId('export').onclick = () => {
+  const out = {formatVersion:1, purpose:'Fictional judicial practice', exportedAt:new Date().toISOString(), cases:[]};
+  for (const c of cases) {
+    const r = records.get(c.id);
+    out.cases.push({id:c.id,title:c.title,role:c.role,domain:c.domain,initialRecord:c.record,firstTask:c.firstTask,
+      initial:r.initial || null, initialCommitted:!!r.reveal, nextRecord:r.reveal, revision:r.revision || null,
+      revisionCommitted:!!r.key, criteria:r.key?.criteria ?? null, human:r.human.map((row,i) => ({
+        criterion:r.key.criteria[i].name, rating:row.rating === '' ? null : row.rating === 'unassessable' ? 'unassessable' : Number(row.rating),
+        reason:row.reason || null})), humanCommittedAt:r.savedAt, debrief:r.savedAt ? r.key.debrief : null, modelReview:r.ai});
+  }
+  const url = URL.createObjectURL(new Blob([JSON.stringify(out,null,2)],{type:'application/json'}));
+  const a = element('a'); a.href=url; a.download='decision-studio-session.json';
+  document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url),1000);
+  announce('Session exported with draft and commitment status.');
+};
+(async () => {
+  try {
+    const response = await api('/api/labs');
+    if (!Array.isArray(response) || !response.length) throw Error('No case files available.');
+    cases = response; for (const c of cases) records.set(c.id,newRecord());
+    selected = cases[0].id; byId('export').disabled = false; render();
+  } catch (error) {
+    byId('progress').textContent='Library unavailable'; byId('workspace').textContent='Reload when the practice server is available.';
+    announce(error.message);
+  }
+})();
+</script>
+</body>
+</html>

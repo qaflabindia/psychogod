@@ -1,0 +1,267 @@
+[
+  {
+    "id": "L01",
+    "title": "The third trip to the pension office",
+    "domain": "Independent scrutiny and enforceable relief",
+    "role": "You are hearing a widow’s benefit petition in a fictional High Court. Use the scheme terms supplied for this exercise.",
+    "record": [
+      "E1. Meera’s family pension stopped eight months ago after her late husband’s employer transferred its records. Two earlier orders directed the respondents to consider her representations. Treasury sent both to the district pension officer, who returned both. Nobody gave Meera an eligibility decision.",
+      "E2. The scheme gives the district pension officer power to decide eligibility. Treasury must implement a signed sanction within five working days. A wrong-district filing must be transferred with its original filing date. Distinct months can be sanctioned separately. Any recovery of an alleged overpayment requires notice and a hearing.",
+      "E3. The State’s affidavit says the original service book is missing. A departmental ledger records 24 qualifying years. A photocopied note says 20 months were unpaid leave. Either calculation crosses the scheme’s 20-year threshold. The officer seeks six more months to reconstruct the book.",
+      "E4. Meera seeks all eight months immediately. The record contains one prior sanction for the same beneficiary but no bank statement. Her rent falls due in six days. The officer and Treasury are represented. The court can require a decision by a fixed date and retain the matter for compliance."
+    ],
+    "firstTask": "Draft the operative part of today’s order. Identify what the court can resolve on this record, what still needs deciding, the person responsible and what Meera must actually do next. Address her request for payment and the State’s best objection.",
+    "update": [
+      "U1. Before the order is signed, Treasury produces an authenticated transaction record: three of the eight months were credited to an account linked to Meera’s old beneficiary number. The bank cannot yet say who could operate that account. Meera acknowledges the number but says she has received nothing.",
+      "U2. The officer now accepts qualification for the five other months and can issue a separate sanction today. The bank can supply the account mandate within four working days. Meera can receive SMS notices and is present through legal aid."
+    ],
+    "finalTask": "Issue a revised short order. Tell Meera which payments she can expect, who will decide the disputed months and when she can return if nobody acts. Identify one part of your first order you would retain or change and why.",
+    "criteria": [
+      {
+        "name": "Threshold and institutional responsibility",
+        "zero": "Sends the whole file for consideration again or makes eligibility depend on finding the original book.",
+        "one": "Identifies the pension officer or the 20-year threshold but leaves the apparent dispute over eligibility unexplained.",
+        "two": "Uses both service figures to resolve the stated qualifying-years objection and assigns distinct sanction and payment tasks to the officer and Treasury."
+      },
+      {
+        "name": "Treatment of adverse evidence",
+        "zero": "Awards all eight months or treats the three credits as proof Meera received the money without addressing the account issue.",
+        "one": "Flags possible duplicate payment but identifies no material that could resolve it.",
+        "two": "Separates the five conceded months from the three credits and gives Meera a chance to answer the bank mandate or equivalent evidence before an adverse decision."
+      },
+      {
+        "name": "Executable remedy",
+        "zero": "Disposes of the petition with another general referral or an unspecified deadline.",
+        "one": "Names an official and deadline but gives Meera no practical means of discovering or enforcing what happened.",
+        "two": "Directs action for the five months with a definite payment timetable, a separate deadline on the three months, accessible notice and an identified route back on default."
+      },
+      {
+        "name": "Revision under time pressure",
+        "zero": "Repeats the first disposition without accounting for either new record.",
+        "one": "Changes or maintains the outcome and cites the update but leaves the effect on timing unclear.",
+        "two": "States which part of the first order survives or changes, ties the choice to the credits and concession, and explains how the resulting sequence addresses rent pressure without double payment."
+      }
+    ],
+    "debrief": {
+      "tradeoff": "Releasing every rupee immediately risks paying the same three months twice. Waiting for the bank before acting on the five conceded months makes Meera bear the department’s recordkeeping failure.",
+      "alternatives": [
+        "Direct a same-day partial sanction and fixed payment date, with a short retained hearing on the disputed credits.",
+        "Dispose of the conceded part and direct a time-bound, reasoned administrative decision on the balance, with evidence shared and an accessible return route. Explain why another disposal will work where the first two did not."
+      ],
+      "failure": "A technically specific direction to Treasury alone still fails if Treasury cannot pay until the district officer signs. Check every link between the order and money reaching Meera.",
+      "transfer": "In a different case the missing leave record would drop the service period below 20 years. Which finding would then have to wait?"
+    }
+  },
+  {
+    "id": "L02",
+    "title": "One urgent slot, two irreversible losses",
+    "domain": "Political influence, conflicts and equal access",
+    "role": "You are the duty judge in a fictional High Court at 15:40. Use the supplied listing protocol and clock.",
+    "record": [
+      "E1. One 18-minute contested slot remains before a binding 16:00 handover. You can spend up to two further minutes on an agreed protective arrangement. A second duty judge can hear another matter tomorrow at 10:00. No other judge is available today.",
+      "E2. A candidate challenges an electoral officer’s refusal to correct an alleged clerical error. A published notice says the ballot goes to print tonight. The candidate’s counsel is a sitting MLA who signed a committee report on procurement of printing machines. The opposing party alleges a conflict. Nothing in the record links the report to the candidate’s eligibility.",
+      "E3. Six families challenge a scheduled 06:00 demolition. A demolition notice identifies their homes. The municipality says the demolition is urgent but supplies no engineer’s report. Families can stay with neighbours overnight, but their homes and belongings remain at the site.",
+      "E4. For this exercise, list by time to irreversible harm and availability of a lawful protective step. Elected office alone is no bar to advocacy. A party seeking counsel’s exclusion must identify a material connection. Temporary relief requires a recorded basis and an opportunity for affected parties to respond."
+    ],
+    "firstTask": "Tell the registry who gets the contested slot. Give the losing applicant a concrete answer about protection before tomorrow. Deal with the conflict allegation and identify a fact that could change your allocation. You cannot give both a full hearing.",
+    "update": [
+      "U1. The municipal engineer now signs an undertaking in court to pause demolition and protect the six named homes and belongings until 12:00 tomorrow. All six applicants confirm coverage. The municipality will attend the 10:00 hearing.",
+      "U2. The printer confirms that the disputed ballot locks at 16:05 today. The MLA now discloses having personally received confidential evidence in committee about the printer’s correction log, which the candidate proposes to rely on. Junior counsel is instructed, has the public records and is ready to argue without using that log."
+    ],
+    "finalTask": "Allocate the remaining slot on these facts and dictate both listing entries. Specify what happens to the six homes overnight, how counsel and the disputed log will be handled, and how each side can answer. Explain any change from your original allocation.",
+    "criteria": [
+      {
+        "name": "Comparable urgency",
+        "zero": "Allocates time by office, political identity, press coverage or poverty alone.",
+        "one": "Compares likely harm but ignores either a live deadline or the offered protection.",
+        "two": "Applies one urgency rule to both dockets and explicitly uses the 16:05 lock and the noon undertaking to explain the revised or retained queue."
+      },
+      {
+        "name": "Specific conflict inquiry",
+        "zero": "Automatically bars the MLA or disregards the confidential-log disclosure entirely.",
+        "one": "Acknowledges the possible conflict without addressing how the log or representation will be handled today.",
+        "two": "Distinguishes the initial procurement overlap from personal receipt of the log, hears the objection, and addresses junior counsel or another workable safeguard while reserving any privilege issue."
+      },
+      {
+        "name": "Protection for the deferred litigant",
+        "zero": "Merely adjourns the deferred case or assumes an ordinary hearing tomorrow prevents the threatened harm.",
+        "one": "Relies on the undertaking but omits its scope, expiry or return time.",
+        "two": "Records enforceable terms covering all six homes and belongings, identifies who must comply and secures a hearing before protection expires."
+      },
+      {
+        "name": "Usable directions within the clock",
+        "zero": "Promises two full hearings, or gives a final election remedy without hearing the respondent.",
+        "one": "Chooses one hearing but gives no practical plan for hearing both election sides on the usable record.",
+        "two": "Makes two feasible entries within the actual time budget, preserves a response on the public evidence, and explains how the new protection and disclosure affected the first decision."
+      }
+    ],
+    "debrief": {
+      "tradeoff": "Giving the candidate priority can be justified once every family has effective overnight protection. The status of counsel is a poor proxy for urgency, yet counsel’s access to confidential evidence creates a real procedural problem.",
+      "alternatives": [
+        "Hear the ballot dispute on public documents with junior counsel and defer any confidential-log issue that can fairly wait.",
+        "If the case cannot fairly proceed without the log, hear both sides on a narrow preservation request within the remaining time, explaining the legal basis and effect on the printing deadline."
+      ],
+      "failure": "Disqualifying the MLA on the spot can consume the slot and deprive the client of a hearing. A general assurance to 'maintain status quo' can leave a family’s belongings unprotected.",
+      "transfer": "If the undertaking covered five homes and the sixth were disputed, what fact and what form of protection would change the ranking?"
+    }
+  },
+  {
+    "id": "L03",
+    "title": "The remark, the order and the person who fell silent",
+    "domain": "Power, public correction and open justice",
+    "role": "You are the judge who made the remark. The applicant is unrepresented. State what you would do yourself and what another bench may need to decide.",
+    "record": [
+      "E1. At a public hearing you called an apparent fourth filing 'another pest petition'. A reporter accurately attributed those words to you. A headline elsewhere says you called the applicant a pest. The applicant stopped speaking. Your dictated order treats the filing as repetitive and dismisses it.",
+      "E2. Before the order is signed, the clerk confirms that the first three filings concerned an earlier refusal. This one challenges a new cancellation notice effective at 17:00 today. The State contests its merits. It can attend an immediate hearing.",
+      "E3. Under the stipulated practice procedure you can correct an unsigned order in open court after hearing both parties. A duty bench can take a reassigned hearing today if notified within 15 minutes. The applicant may request reassignment. The State asks you to direct the reporter to delete the report.",
+      "E4. Existing reporting restrictions cover only confidential exhibits; none was mentioned in the article. The applicant is present and can speak, use a written note or consult duty counsel."
+    ],
+    "firstTask": "Speak directly to the applicant in your next four sentences. Then dictate directions on the unsigned order, the new cancellation and the State’s deletion request. Describe what you would do if the applicant remained silent.",
+    "update": [
+      "U1. Through duty counsel, the applicant asks for a different judge, says the cancellation will end access to a shelter tonight, and asks that the original words and correction remain publicly accessible. The duty judge offers a hearing in 25 minutes if you send the file now.",
+      "U2. The State concedes in open court that it can suspend the cancellation until that hearing concludes. The original reporter offers to publish the clarification. The outlet with the misleading headline is absent."
+    ],
+    "finalTask": "Give your final directions in plain speech and draft the handover note. Say what the public record should show, who is responsible for preserving shelter access and what the receiving judge should remain free to decide.",
+    "criteria": [
+      {
+        "name": "Personal correction and effective voice",
+        "zero": "Defends the epithet, blames the reporter, or treats silence as acceptance.",
+        "one": "Offers general regret without correcting the procedural mistake or giving the applicant a usable way to respond.",
+        "two": "Withdraws the remark and mistaken repetition finding directly, offers a realistic response channel and does not condition relief on forgiveness."
+      },
+      {
+        "name": "Public attribution and record",
+        "zero": "Orders deletion of accurate reporting, erases the exchange or attributes the misleading headline to the reporter.",
+        "one": "Distinguishes the reports but leaves the erroneous order or public account uncorrected.",
+        "two": "Preserves the original exchange with a visible correction, distinguishes the two publications and gives a reasoned answer on the deletion request consistent with the stated restriction."
+      },
+      {
+        "name": "Protection and handover",
+        "zero": "Insists on deciding the merits personally or sends the applicant away without addressing the cancellation clock.",
+        "one": "Transfers the file but leaves shelter access or the timing of the hearing unresolved.",
+        "two": "Responds to the applicant’s preference, promptly arranges the 25-minute hearing, records the State’s protection through its conclusion and identifies who must communicate it to the shelter."
+      },
+      {
+        "name": "Independence after repair",
+        "zero": "Treats the apology as resolving the case or tells the next judge how to rule on cancellation.",
+        "one": "Reopens the matter or refers it on without identifying the actual dispute.",
+        "two": "Relates the new notice to the mistaken dismissal, sends both sides’ material and a neutral account, and leaves the fresh merits and any further protection open."
+      }
+    ],
+    "debrief": {
+      "tradeoff": "A private apology reaches the applicant but leaves a public misimpression and a wrongful dismissal intact. A public correction can repair attribution, yet the applicant still needs shelter and a judge they can address freely.",
+      "alternatives": [
+        "Record the concession as an undertaking, notify the shelter immediately and transfer the case with both orders and the new notice.",
+        "Ask the State to produce a written temporary suspension immediately and confirm its delivery while the registry arranges the reassigned hearing. Record what happens if delivery fails."
+      ],
+      "failure": "A warm apology can coexist with an unrepaired dismissal. Check the applicant’s position at 17:00, the public record, and the receiving judge’s independence separately.",
+      "transfer": "How would you handle the press request if the report had identified a protected witness whose name was never spoken in open court?"
+    }
+  },
+  {
+    "id": "L04",
+    "title": "Whose choice is the court protecting?",
+    "domain": "Freedom of conscience, coercion and jurisdiction",
+    "role": "You hear a fictional habeas petition about an adult. For the exercise, the jurisdictional question is present unlawful restraint. An independent criminal inquiry into alleged threats can proceed separately.",
+    "record": [
+      "E1. A father seeks custody of his 26-year-old daughter Asha after she adopts a different religion and moves to a residential study centre. She has her identity documents. An earlier handwritten note says she chose the move. Her father relies on a voice message saying 'they will not let me out'. Its date and context are disputed.",
+      "E2. Asha speaks a regional language. The centre supplies an interpreter employed by its director. In his presence she says she wishes to stay. Her father proposes supervised return to his home pending inquiry. No lawful basis for family custody has been identified.",
+      "E3. An independent interpreter is available by secure video in 30 minutes. Free duty counsel is available. Asha can speak in private and can be offered safe transport to a destination of her own choosing. Both father and director are before the court.",
+      "E4. A local religious festival begins tonight. Rival groups outside court demand either a declaration validating her conversion or a return to her father. There is no pending claim seeking a religious-status declaration."
+    ],
+    "firstTask": "State the issue for the next half hour, how you would establish what Asha wants, and what temporary arrangement you would put in place. Explain how you would treat the voice note, her earlier writing and the two demands outside court.",
+    "update": [
+      "U1. Alone with the independent interpreter, Asha says the earlier decision to join the centre was voluntary. Yesterday the director kept the exit key after she asked to leave. She now wants to leave for a friend’s home while continuing her faith. She fears her father may follow her. The director offers to return the key now.",
+      "U2. Asha consents to an independent officer confirming a safe departure but asks the court to keep her destination confidential. The father asks for the address so he can independently verify her safety. The director disputes the key incident and requests a chance to answer before any finding against him."
+    ],
+    "finalTask": "Decide what can be ordered today without deciding the truth of every historic allegation. Explain to Asha what will happen on leaving court. Address her father’s and the director’s requests, and say what changed your initial assessment.",
+    "criteria": [
+      {
+        "name": "Reliable opportunity to be heard",
+        "zero": "Treats the director’s interpreter, the handwritten note or the father’s assertion as conclusive.",
+        "one": "Asks Asha what she wants but leaves the interpreter conflict or privacy unresolved.",
+        "two": "Uses an independent, private and accessible account, weighs the earlier evidence in context and distinguishes joining voluntarily from being free to leave later."
+      },
+      {
+        "name": "Boundaries of judicial power",
+        "zero": "Chooses her religion, returns her to family supervision or confines her for her own protection without authority.",
+        "one": "Recognises adult autonomy but leaves the scope of the hearing or the present-restraint question unclear.",
+        "two": "Addresses present freedom to leave and her stated destination, while explaining why the family and crowd cannot obtain custody or a ruling on religious truth on this record."
+      },
+      {
+        "name": "Operational protection and privacy",
+        "zero": "Releases the address publicly, orders nonconsensual supervision, or assumes an offered key alone secures safe departure.",
+        "one": "Offers confidentiality or transport without addressing how safe departure can be confirmed.",
+        "two": "Implements a consensual departure with an identifiable person responsible, an appropriate confidential confirmation and a clear decision on the father’s address demand."
+      },
+      {
+        "name": "Revision and disputed fault",
+        "zero": "Resolves the key allegation as proved without hearing the director or delays all relief until a criminal inquiry ends.",
+        "one": "Recognises the updated wish or contested key but leaves its effect on today’s decision unclear.",
+        "two": "Explains why the new independent account changes or confirms the protection required, hears the director on contested fault if needed and separates safe exit today from any later fact-finding."
+      }
+    ],
+    "debrief": {
+      "tradeoff": "A voluntary conversion and coercion on a later evening can both be true. Taking the new statement seriously protects Asha’s freedom to retain her faith and leave the institution. Publicly proving her location to her father may defeat that freedom.",
+      "alternatives": [
+        "Arrange consensual transport, obtain a limited confidential confirmation of safe departure, hear both sides on remaining issues and then dispose of the liberty petition if effective release is established.",
+        "Retain a short compliance listing if a concrete obstacle prevents departure, confining the order to that obstacle. A separate investigation can test the disputed past conduct."
+      ],
+      "failure": "An order releasing Asha to either man can reproduce the very restraint the petition asks the court to examine.",
+      "transfer": "If Asha privately asked to return to the centre after a free discussion, which safeguards would still be justified and which would become coercive?"
+    }
+  },
+  {
+    "id": "L05",
+    "title": "Five days of custody for a missing phone",
+    "domain": "Liberty and independent scrutiny",
+    "role": "Duty magistrate. Decide a contested request for police custody. The record and procedural assumptions are fictional.",
+    "record": [
+      "E1 · It is 16:10. Police seek five days of custody of a shop assistant charged with moving stolen phones. Defence has the remand request and appears by legal aid. Production was timely. For this exercise the arrest itself is lawful.",
+      "E2 · The application says 'recovery, confrontation and prevention of tampering'. Its only annexure is a seizure sheet listing the till, ledger and CCTV recorder already held by police. One customer phone is missing. No identification parade or other confrontation is scheduled.",
+      "E3 · The officer says the assistant knows the shared locker code. The assistant offers to identify the locker in counsel's presence. The owner and two shift workers also know the code. Counsel offers daily attendance, says a five-day absence will cost the assistant their job, and asks for release.",
+      "E4 · Exercise assumptions: police custody requires an identified investigative step that needs custody and a justified duration. You may refuse it, consider release with conditions after hearing both sides, or authorise a narrower period with stated safeguards. No special statutory embargo applies. A refusal of police custody alone does not decide bail."
+    ],
+    "firstTask": "Dictate your first decision in words the assistant can understand. Address the missing phone, the officer's strongest reason and the practical cost of your direction. Identify the fact that would most change your conclusion.",
+    "update": [
+      "U1 · Before the order is signed the officer shows a message from the assistant's shop account: 'empty the locker before closing'. A courier is due in 30 minutes. The account is accessible from a shared desktop. No author has been identified.",
+      "U2 · The duty officer can send another team to secure the locker immediately. A supervisor can supply a reset code within an hour. Defence has just seen the message and asks for ten minutes to take instructions. There is no new information identifying what five days of detention would achieve."
+    ],
+    "finalTask": "Hear the new request and dictate the operative order. Explain what the message changes, what remains unproved, and which step must happen within 30 minutes. Decide the custody request, address release separately within the stipulated powers, and say who will check execution. Explain whose interests bear the residual risk.",
+    "criteria": [
+      {
+        "name": "Independent custody decision",
+        "zero": "Copies the police request or refuses it solely because other articles are seized.",
+        "one": "Identifies a recovery need but leaves the role or duration of custody unclear.",
+        "two": "Tests the missing phone and locker access against a specific investigative step, alternatives and any period actually authorised."
+      },
+      {
+        "name": "Fair testing of new evidence",
+        "zero": "Treats a shared-account message as proof of authorship or ignores it.",
+        "one": "Notes either attribution uncertainty or the deadline, without addressing the other.",
+        "two": "Accounts for attribution and urgency, gives the defence a practical opportunity to respond, and avoids deciding guilt."
+      },
+      {
+        "name": "Orders that can be carried out",
+        "zero": "Uses generic safeguard language without deciding custody.",
+        "one": "Decides custody but leaves the time-sensitive protection or route to release unresolved.",
+        "two": "Makes a timed, executable direction on the locker, decides police custody and addresses release, with an owner and a check on implementation."
+      },
+      {
+        "name": "Revision and residual risk",
+        "zero": "Repeats or reverses the first order without a reason linked to the update.",
+        "one": "Mentions the message or alternative team but does not explain who bears the remaining risk.",
+        "two": "Explains what survives from the initial order, tests the alternative team and reset against the courier deadline, and identifies the remaining liberty or recovery cost."
+      }
+    ],
+    "debrief": {
+      "tradeoff": "Police have a concrete reason to act within 30 minutes. Whether this person must lose liberty to enable that act is a separate question. A reset in an hour cannot alone secure the locker in time.",
+      "alternatives": [
+        "Secure the locker immediately, hear counsel on the message and decide release on workable conditions if justified. This relies on the second team reaching the locker in time.",
+        "Arrange immediate supervised identification if freely offered and useful. Explain what legal power and safeguards support any restraint, and what ends it. Voluntary assistance cannot silently become overnight custody."
+      ],
+      "failure": "A written five-day order that repeats 'recovery' still gives no reason why access by this person is necessary. Conversely, simply rejecting the police request can leave the phone at risk and the assistant in custody awaiting an undecided bail question.",
+      "transfer": "Have an observer separately mark the investigative step, need for custody, duration and executable release terms in a different fictional remand file. A preferred disposition alone tells the observer little."
+    }
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "J01",
+    "title": "A disputed law degree",
+    "domain": "Dignity and evidence",
+    "prompt": "During a crowded motion hearing the registry flags a mismatch between an advocate’s enrolment details and a university reply. A reporter is taking notes. The advocate says a change of name explains the mismatch. Give your next three oral directions.",
+    "criteria": ["Identifies the exact mismatch and describes it as unresolved.", "Gives the advocate a reasonable chance to produce the relevant records and specifies who will verify them.", "Addresses the individual evidence and avoids labels about the advocate, graduates or journalists."]
+  },
+  {
+    "id": "J02",
+    "title": "Correcting a public remark",
+    "domain": "Dignity and evidence",
+    "prompt": "You likened a self-represented petitioner to a pest after mistaking a fresh filing for a fourth copy of a dismissed petition. The registry confirms your mistake midway through the hearing. The petitioner has fallen silent. Speak your next four sentences from the bench.",
+    "criteria": ["Acknowledges the factual mistake, withdraws the comparison and addresses the petitioner directly.", "Corrects the procedural record and asks the petitioner to identify the fresh issue.", "Allows a meaningful response without requiring the petitioner to accept the apology or surrender a remedy."]
+  },
+  {
+    "id": "J03",
+    "title": "A legislator appears for a developer",
+    "domain": "Conflicts and listing",
+    "prompt": "A sitting MLA appears for a developer challenging a municipal decision. An objector produces a committee report on the same project bearing the MLA’s signature. The client seeks an interim order today. Identify what to establish before deciding how the hearing should proceed.",
+    "criteria": ["Separates elected status from the specific overlap between committee work and the client’s dispute.", "Invites disclosure and allows both sides to address the facts, applicable rules and possible safeguards.", "Gives reasons for the procedural choice and protects the client from unfair loss of representation or time."]
+  },
+  {
+    "id": "J04",
+    "title": "An MP requests urgent listing",
+    "domain": "Conflicts and listing",
+    "prompt": "Counsel seeks same-day listing for an MP because a televised rally starts tonight. A legal-aid lawyer also requests a hearing for a worker facing eviction at dawn. You control one urgent slot. Describe the facts you need and give a short, reviewable listing decision.",
+    "criteria": ["Asks both sides about the threatened harm, deadline, available alternatives and relevant listing rules.", "Uses the same urgency criteria for both requests and explains their application.", "Provides a practical route for the deferred applicant to seek protection if circumstances change."]
+  },
+  {
+    "id": "J05",
+    "title": "A rival party brings a PIL",
+    "domain": "Public interest and jurisdiction",
+    "prompt": "An opposition office-bearer seeks an independent inquiry into a procurement contract a week before an election. The affidavit includes tender records and an anonymous accusation. The government calls the case a publicity stunt. Dictate the issues for preliminary scrutiny.",
+    "criteria": ["Identifies the public injury, legal basis, requested relief and petitioner’s disclosed interest.", "Distinguishes checkable records from unsupported allegations and invites an appropriate response.", "Explains whether the material justifies the next procedural step without treating political identity as decisive."]
+  },
+  {
+    "id": "J06",
+    "title": "A letter from a brick kiln",
+    "domain": "Public interest and jurisdiction",
+    "prompt": "A handwritten letter says workers are confined at a brick kiln. It supplies a village and two names but lacks an affidavit. A clerk proposes returning it as defective. What steps would you direct under the court’s applicable procedure?",
+    "criteria": ["Assesses urgency and the potential risk to workers from contacting the alleged employer first.", "Identifies an available verification, legal-aid or letter-petition route and assigns responsibility.", "Sets a prompt reporting date and reserves disputed factual findings until evidence is available."]
+  },
+  {
+    "id": "J07",
+    "title": "The pension representation",
+    "domain": "Independent judicial scrutiny",
+    "prompt": "A retired employee seeks only an order asking the department to consider a pension representation. The employer says the underlying claim ended twenty years ago. Counsel proposes a one-line disposal. Explain which issues require a decision and draft an operative direction.",
+    "criteria": ["Examines the underlying entitlement, relevant chronology, any continuing obligation and available remedy.", "Asks what the authority is legally required to decide and whether the new representation affects limitation.", "Issues a reasoned order that resolves the threshold issue or defines the authority’s task without reviving a stale claim by implication."]
+  },
+  {
+    "id": "J08",
+    "title": "A benefits file sent round twice",
+    "domain": "Independent judicial scrutiny",
+    "prompt": "A widow has two earlier orders directing departments to consider her application for family benefits. Each department forwarded it to the other. The State proposes the same direction again. What would make your order usable by the widow?",
+    "criteria": ["Examines earlier orders, the governing scheme and the stated reasons for the referrals.", "Identifies the proper decision-maker or explains how jurisdiction will be determined after hearing the affected authorities.", "Defines the issue, deadline, communication method and next step if the ordered decision does not occur."]
+  },
+  {
+    "id": "J09",
+    "title": "A copied remand application",
+    "domain": "Liberty and evidence",
+    "prompt": "A remand application for a street vendor repeats stock phrases about tampering. Counsel says the seized material is already in police custody. The arresting officer offers no example of threatened interference. Conduct the inquiry and explain what your order must record.",
+    "criteria": ["Checks the applicable arrest and remand safeguards and hears the person or counsel on compliance.", "Tests the asserted need for custody against individual facts, timing and available alternatives.", "Records an independent conclusion with reasons and gives effect to the applicable remedy where a requirement fails."]
+  },
+  {
+    "id": "J10",
+    "title": "A charge based on a designation",
+    "domain": "Liberty and evidence",
+    "prompt": "The prosecution asks you to frame a conspiracy charge against a procurement officer because their designation appears on a circulation list. The file also contains an unsigned instruction and records identifying who authorised payment. Explain how you would approach the charge-stage decision.",
+    "criteria": ["Identifies the elements at issue and material connecting this accused to the alleged conduct.", "Applies the charge-stage threshold without deciding witness credibility as at a completed trial.", "Explains why the material as a whole supports a charge or discharge instead of adopting the police conclusion."]
+  },
+  {
+    "id": "J11",
+    "title": "An adult’s choice of faith",
+    "domain": "Conscience and autonomy",
+    "prompt": "In a habeas corpus petition a father says his adult daughter has been coerced into changing religion and marrying. She says the decisions were hers and asks to leave. A relative offers to supervise her while the court investigates. Conduct the next part of the hearing.",
+    "criteria": ["Creates an opportunity for the adult to speak freely, with suitable privacy and interpretation where needed.", "Distinguishes evidence of restraint or coercion from family disapproval of the choices.", "Explains the scope of the proceeding and the legal authority for any proposed restriction."]
+  },
+  {
+    "id": "J12",
+    "title": "Two claims to worship",
+    "domain": "Conscience and autonomy",
+    "prompt": "Women devotees seek entry for a festival. Other devotees say a restriction forms part of their observance. Both invoke religious freedom. Each asks for an immediate final ruling on incomplete affidavits. Set out the questions you would hear before choosing interim relief.",
+    "criteria": ["Accurately states each group’s account of the practice and identifies whose rights may be affected.", "Identifies the legal issue, relevant precedent and factual disputes requiring a hearing.", "Explains the scope, timing and basis of any interim decision without scoring the sincerity of a party by the judge’s personal beliefs."]
+  },
+  {
+    "id": "J13",
+    "title": "Silence at a police station",
+    "domain": "Dignity and evidence",
+    "prompt": "In a sexual assault trial involving a police officer, a submission relies on lack of injuries and the complainant’s failure to shout. The parties dispute what happened. Explain how you would address this submission while preserving the applicable burden of proof.",
+    "criteria": ["Identifies the legal elements, relevant evidentiary rules and the burden applicable on these facts.", "Evaluates the specific setting and other evidence without assuming how a person must resist.", "Allows fair testing of evidence and gives reasons without prejudging either witness."]
+  },
+  {
+    "id": "J14",
+    "title": "A reporter quotes the bench",
+    "domain": "Open justice and correction",
+    "prompt": "A reporter publishes a severe oral observation you made. The article accurately labels it an observation, but readers have treated it as a finding. Counsel seeks a blanket order stopping coverage. What response would you consider and why?",
+    "criteria": ["Checks the actual words, report and any applicable confidentiality rule.", "Explains the distinction between oral discussion and an operative order and considers a clear public correction.", "Tests the legal basis, necessity and scope of any restriction after hearing affected interests."]
+  },
+  {
+    "id": "J15",
+    "title": "A cropped courtroom clip",
+    "domain": "Open justice and correction",
+    "prompt": "A social media correspondent posts eight seconds of an exchange. A litigant says the full recording shows that the bench was reading aloud from an affidavit. A staff member proposes contempt action. Outline the verification and response process.",
+    "criteria": ["Seeks the complete authorised record and checks the speaker, context and attribution.", "Considers a factual clarification and distinguishes an error from deliberate or legally actionable interference.", "Identifies procedural safeguards and gives the affected person an opportunity to answer before adverse findings."]
+  },
+  {
+    "id": "J16",
+    "title": "An inaccessible video hearing",
+    "domain": "Access and case management",
+    "prompt": "A legal-aid client repeatedly loses audio while opposing an interim possession order. The better-connected party says the client is delaying. The court list is already running late. Give an immediately workable hearing plan.",
+    "criteria": ["Verifies the communication problem and whether the client can understand and participate.", "Offers a workable alternative such as a brief pass-over, assisted connection or interpreter as appropriate.", "Records how urgency and fairness are addressed and makes the next step clear to both parties."]
+  },
+  {
+    "id": "J17",
+    "title": "A hearing repeatedly adjourned",
+    "domain": "Access and case management",
+    "prompt": "A wage claimant has travelled from another district for a fourth hearing. The respondent’s lawyer seeks another adjournment because senior counsel is elsewhere. One witness is present and the relevant records have just been served. Decide what can fairly be done today.",
+    "criteria": ["Obtains the adjournment history, reasons, service details and practical effect on both sides.", "Considers hearing available issues, preserving evidence or giving limited preparation time as appropriate.", "Records reasons, the next effective step and who must take it by when."]
+  },
+  {
+    "id": "J18",
+    "title": "A new filing after a political defeat",
+    "domain": "Public interest and jurisdiction",
+    "prompt": "The day after losing a political vote, a group seeks urgent constitutional relief. One prayer asks the court to adopt its policy. Another alleges that an official denied eligible residents a statutory benefit. How would you separate and assess the prayers?",
+    "criteria": ["Identifies the source of each asserted duty and what evidence supports each alleged injury.", "Distinguishes a policy preference from a reviewable legal claim while considering standing and appropriate process.", "Explains what relief is within jurisdiction and why each prayer proceeds, is narrowed or is declined."]
+  },
+  {
+    "id": "J19",
+    "title": "A committee connection emerges late",
+    "domain": "Conflicts and listing",
+    "prompt": "After interim relief is granted, opposing counsel learns that an elected advocate appearing in the matter received confidential evidence on the disputed transaction through a legislative committee. The allegation is contested. Plan a fair hearing on the conflict.",
+    "criteria": ["Identifies the alleged overlap and seeks verifiable disclosure without compelling protected material indiscriminately.", "Allows the advocate, client and opponent to respond and identifies applicable professional and privilege rules.", "Considers proportionate safeguards and any effect on interim relief, recording reasons for each decision."]
+  },
+  {
+    "id": "J20",
+    "title": "Can a worker obtain release?",
+    "domain": "Access and case management",
+    "prompt": "A daily-wage worker granted bail remains in custody. The legal-aid lawyer reports that the worker cannot find a local surety and has no local family. The prosecutor raises a specific attendance concern. Conduct a short hearing on whether the condition needs revision.",
+    "criteria": ["Establishes the actual obstacle to release, custody duration and the prosecution’s evidence about attendance.", "Considers lawful, practicable conditions and gives both sides an opportunity to address them.", "Gives reasons, arranges communication of the order and identifies how continued detention will be brought back to court."]
+  }
+]

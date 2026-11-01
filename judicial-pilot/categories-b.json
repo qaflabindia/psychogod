@@ -1,0 +1,902 @@
+[
+  {
+    "id": "C11",
+    "title": "Competing claims to worship",
+    "construct": "Identifies whose practice a temporary order would constrain and tests accessible, reversible ways of protecting it on a disputed record.",
+    "cases": [
+      {
+        "title": "The single doorway",
+        "record": "Trustees close the only step-free shrine entrance during a rite. Wheelchair users seek access and officiants say passage interrupts a silent interval. A timetable confirms the interval but gives no reason for closing the full corridor.",
+        "decision": "Settle access arrangements for the next observance."
+      },
+      {
+        "title": "A procession at dusk",
+        "record": "Two congregations seek the same narrow street at dusk. Each links timing to a practice. Police supply a dated traffic map but no site inspection; the alternative lane has stairs.",
+        "decision": "Decide what movement can be authorised on this record."
+      },
+      {
+        "title": "Entry by token",
+        "record": "Organisers issue worship tokens through household heads. One group says this excludes women living alone. Organisers cite crowd limits and produce gate counts rather than the distribution list.",
+        "decision": "Decide whether to alter token distribution before the next session."
+      },
+      {
+        "title": "Memorial lamp",
+        "record": "Trustees remove lamps placed by one group at a shared memorial. That group calls lighting integral; another group supplies photographs of obstruction at the narrow exit. No one measured clearance.",
+        "decision": "Set terms for the next gathering while the facts are tested."
+      },
+      {
+        "title": "Festival water",
+        "record": "A shared tank is booked for ritual immersion. A second group draws water there during the same hour. Water-quality tests concern a different date, and a nearby tap is locked.",
+        "decision": "Determine access and any interim condition for the next use."
+      },
+      {
+        "title": "Bell and recitation",
+        "record": "A shrine rings a bell during a neighbouring congregation's recitation. Both have long-standing timetables and dispute whose shifted. The only sound reading is from the street.",
+        "decision": "Decide whether the present record justifies a timing or sound restriction."
+      },
+      {
+        "title": "Converts at the gate",
+        "record": "Stewards insist on family registers for entry to a public-facing worship event. Converts describe being turned away. The organiser says identity checks prevent ticket resale but has no published rule.",
+        "decision": "Frame interim entry directions while the claimed justification is heard."
+      },
+      {
+        "title": "A roofed prayer space",
+        "record": "During repairs, a roofed space can accommodate one gathering. Both groups have bookings and one includes elderly devotees who cannot stand outdoors. The engineer certifies only the roofed area safe.",
+        "decision": "Allocate or share the usable space pending a full hearing."
+      },
+      {
+        "title": "Sacred garment at screening",
+        "record": "Security staff require removal of a ceremonial head covering. Devotees say private screening was available last year; the contractor says staffing has changed but supplies no roster.",
+        "decision": "Address the screening requirement for the immediate event."
+      },
+      {
+        "title": "The archive room",
+        "record": "Two religious bodies seek access to a shared manuscript for separate observances. The custodian says repeated handling damages it. One group accepts a facsimile; the other says presence before the original matters.",
+        "decision": "Set provisional terms for access to the object."
+      }
+    ],
+    "developments": [
+      "The organiser submits a temporary arrangement that protects its own practice but would leave some opponents unable to participate at all. The affected people have not yet been heard.",
+      "Both groups offer to trial staggered access, but disagree about who receives the first slot. Missing the first slot has a documented practical consequence for one group.",
+      "A contemporaneous register contradicts a material assertion about past practice. Its author can explain the entry tomorrow and both sides contest how representative it is.",
+      "The authority charged with implementing any order says it has half the staff assumed in the submissions. It identifies a narrower arrangement deliverable today.",
+      "A previously unrepresented subgroup objects to the compromise made in its name. Its members can join briefly now but cannot file affidavits before the observance."
+    ],
+    "tasks": [
+      "Dictate a provisional disposition naming the affected practices, scope, expiry and unresolved fact.",
+      "Conduct the short evidentiary hearing. Identify one question for each side, the decisive uncertainty and what happens until it is answered.",
+      "Compare the requested restriction with a narrower arrangement. Allocate the practical cost of each and give reasons for the choice.",
+      "Write enforceable instructions for organisers and a plain-language notice telling each group how to obtain review before the next observance."
+    ],
+    "criteria": [
+      {
+        "name": "Competing interests",
+        "zero": "Treats one side's devotion as inherently inferior.",
+        "one": "Names both claims but omits the practical exclusion in this record.",
+        "two": "Connects both practices and the new evidence to identifiable groups and concrete effects."
+      },
+      {
+        "name": "Provisional reasoning",
+        "zero": "Declares contested history or necessity settled without inquiry.",
+        "one": "Flags the dispute but gives no response to the development.",
+        "two": "Identifies what remains disputed and explains what provisional conclusion the current evidence permits."
+      },
+      {
+        "name": "Usable accommodation",
+        "zero": "Imposes an unbounded restriction or leaves access to discretion.",
+        "one": "Offers compromise without feasibility or review.",
+        "two": "Defines a feasible temporary arrangement, its cost and a specific opportunity to revisit it."
+      }
+    ]
+  },
+  {
+    "id": "C12",
+    "title": "Sexual-violence evidence and stereotypes",
+    "construct": "Tests a particular evidentiary inference while preserving the parties' opportunities to be heard and the applicable burden in the exercise.",
+    "cases": [
+      {
+        "title": "Delayed disclosure",
+        "record": "A complainant reported after returning from a worksite. The supervisor controlled transport. Defence relies on delay, and the travel roster only partially covers that week.",
+        "decision": "Determine how the delay submission should be examined."
+      },
+      {
+        "title": "No visible injury",
+        "record": "The clinical note records no visible injury during a brief examination. Defence says it rules out the allegation. The clinician's report does not state what examination was undertaken.",
+        "decision": "Assess what inference the record supports."
+      },
+      {
+        "title": "Friendly messages",
+        "record": "A chat after the reported incident appears friendly. The parties disagree whether it concerned unpaid wages. Only an excerpt has been produced.",
+        "decision": "Decide how to handle the contested inference from the exchange."
+      },
+      {
+        "title": "Silent neighbour",
+        "record": "A neighbour heard no shouting through a closed partition. One party says this proves consent. The witness did not test audibility and cannot place the exact hour.",
+        "decision": "Evaluate the absence-of-sound submission."
+      },
+      {
+        "title": "Prior relationship",
+        "record": "The parties previously dated. The defence cites prior intimacy. The complainant disputes that the earlier encounters say anything about the encounter in issue.",
+        "decision": "Frame the question the decision-maker must answer."
+      },
+      {
+        "title": "Changing sequence",
+        "record": "Two accounts place a conversation at different stages of the evening. An interpreter assisted at the first interview. The official notes summarise rather than transcribe.",
+        "decision": "Assess the significance of the apparent inconsistency."
+      },
+      {
+        "title": "Work resumed",
+        "record": "A worker resumed the same shift after the alleged assault. Payroll records show a missed shift would have cost a week's attendance bonus. Neither party disputes the dates.",
+        "decision": "Determine what weight, if any, to give the return to work."
+      },
+      {
+        "title": "Camera gap",
+        "record": "A building camera misses a corridor. Counsel argues an allegation would have been captured. A diagram shows two possible routes and the clocks were not synchronised.",
+        "decision": "Decide what the absence of footage establishes."
+      },
+      {
+        "title": "A late witness",
+        "record": "A colleague describes an immediate disclosure but did not come forward until months later. The colleague and one party share a workplace. No contemporaneous written statement exists.",
+        "decision": "Test the competing explanations for the delay in the witness account."
+      },
+      {
+        "title": "Transport home",
+        "record": "A driver says the complainant accepted a lift from the accused afterward. The last bus had gone. The driver heard only the pickup arrangements, not the earlier interaction.",
+        "decision": "Assess the probative reach of the driver's account."
+      }
+    ],
+    "developments": [
+      "The other side accepts the underlying observation but disputes the proposed inference. There is time for a short submission from each side today.",
+      "A primary record that could clarify timing is missing. Its custodian gives an equivocal explanation; neither party admits responsibility.",
+      "A witness offers an alternative explanation based on personal knowledge but has yet to be questioned by the other side.",
+      "A proposed witness would testify only about how a genuine complainant would normally behave and has no knowledge of this event.",
+      "A corrected transcript qualifies an important phrase used in the original submission. The parties disagree about whether it changes the material issue."
+    ],
+    "tasks": [
+      "Give an interlocutory ruling on how the inference may be tested and identify what would remain for the final decision.",
+      "Draft concise reasons weighing the observation and its strongest alternative explanation under the exercise's ordinary criminal burden.",
+      "Specify fair questions for the hearing, exclude any irrelevant stereotype, and explain how the opponent can challenge the evidence.",
+      "Explain to the parties what has been established, what remains genuinely disputed, and how uncertainty affects the next step."
+    ],
+    "criteria": [
+      {
+        "name": "Evidential relevance",
+        "zero": "Treats conduct as a universal marker of credibility or consent.",
+        "one": "Rejects a stereotype without examining the observation.",
+        "two": "Separates the concrete observation from competing inferences and qualifies it with the new material."
+      },
+      {
+        "name": "Fair testing",
+        "zero": "Assumes the allegation true or false and forecloses challenge.",
+        "one": "Allows a response without identifying what to test.",
+        "two": "Describes a proportionate way to test the material issue, including the strongest answer from the other side."
+      },
+      {
+        "name": "Burden and limits",
+        "zero": "Requires a party to disprove an unsupported assumption.",
+        "one": "Mentions the burden without applying it.",
+        "two": "States which issue is unresolved and how that limits permissible findings at this stage."
+      }
+    ]
+  },
+  {
+    "id": "C13",
+    "title": "Disability, language and digital participation",
+    "construct": "Detects apparent attendance without effective participation and arranges an accessible hearing without sacrificing urgent protection.",
+    "cases": [
+      {
+        "title": "Audio lag",
+        "record": "A tenant mouths agreement on screen but later says the Bengali interpretation cut out. Landlord seeks an urgent possession direction; the recording captures only the main audio.",
+        "decision": "Decide whether the recorded assent can be relied on today."
+      },
+      {
+        "title": "Unread exhibit",
+        "record": "A blind claimant receives scanned pages with no readable text. The respondent says service was timely and wants to cross-examine today. The original spreadsheet is available.",
+        "decision": "Plan an effective hearing on the exhibit."
+      },
+      {
+        "title": "Interpreter overlap",
+        "record": "An interpreter is the applicant's relative and the only speaker of the dialect presently online. A neutral interpreter can attend tomorrow. An interim decision falls due tonight.",
+        "decision": "Arrange interim participation and check comprehension."
+      },
+      {
+        "title": "Shared handset",
+        "record": "Two opposing family members use one phone at a legal services centre. Each needs a private consultation; staff can offer separate rooms but only one connection.",
+        "decision": "Determine how the next submissions will be taken."
+      },
+      {
+        "title": "Written directions",
+        "record": "A litigant with hearing loss asks for live captions. Automatic captions repeatedly misstate amounts. Counsel offers typed summaries after the hearing.",
+        "decision": "Choose a method for resolving the disputed numbers."
+      },
+      {
+        "title": "Medication break",
+        "record": "A party has requested short breaks supported by a clinical note. A witness must catch the last bus. Opposing counsel offers to take all evidence without the party present.",
+        "decision": "Organise attendance and evidence fairly for the remaining time."
+      },
+      {
+        "title": "Unexpected script",
+        "record": "The notice arrived in a script the respondent cannot read. A delivery receipt is signed, but the respondent says a neighbour signed it. The claimant faces the imminent end of a benefit.",
+        "decision": "Decide the effect of the purported notice on today's hearing."
+      },
+      {
+        "title": "Low bandwidth",
+        "record": "A labourer's video freezes each time a plan is displayed. The opponent says the worker already acknowledged it in an earlier call. The plan has changed since that call.",
+        "decision": "Decide whether and how to use the revised plan."
+      },
+      {
+        "title": "Assistive communication",
+        "record": "A witness answers using a speech device with a long response delay. Counsel interrupts to finish each sentence and a clerk is preparing a summary.",
+        "decision": "Set ground rules for receiving and recording the answers."
+      },
+      {
+        "title": "Text-only participation",
+        "record": "A claimant can type short answers but cannot speak on today's connection. Cross-examination is requested about a translated account; the translator is waiting in person.",
+        "decision": "Set an accessible schedule that preserves fair testing."
+      }
+    ],
+    "developments": [
+      "The affected participant says the proposed workaround still leaves one specific part of the exchange inaccessible. The opponent reports a concrete cost of pausing.",
+      "A neutral communication assistant is available for only fifteen minutes now. A longer session can be arranged tomorrow at the registry's expense.",
+      "The written record contains apparent agreement to a disputed point. The participant says the communication failure preceded that exchange.",
+      "Staff can provide a private accessible room today, but travel would take longer than the remaining hearing slot and the opposing party seeks immediate protection.",
+      "Both representatives agree to proceed quickly, but the affected participant cannot yet explain in their own words what the proposed direction would do."
+    ],
+    "tasks": [
+      "Give the next two procedural directions and specify how to check whether they worked before relying on a submission.",
+      "Decide which issues can proceed today and which must wait. Allocate the costs of delay and identify a proportionate interim step.",
+      "Draft the minute of hearing, including any contested apparent concession, accessible service and the return arrangement.",
+      "Address the opposing party's best objection to an adjustment and choose a fallback if the proposed means fails mid-hearing."
+    ],
+    "criteria": [
+      {
+        "name": "Participation check",
+        "zero": "Treats logged attendance or counsel's assent as proof of understanding.",
+        "one": "Acknowledges the barrier without checking what was missed.",
+        "two": "Verifies the affected exchange with the participant in a usable form before relying on it."
+      },
+      {
+        "name": "Feasible adjustment",
+        "zero": "Directs an unavailable measure or proceeds without an adjustment.",
+        "one": "Offers a plausible adjustment without addressing time, privacy or access constraints.",
+        "two": "Selects a feasible adjustment, contingency and scope in light of the new facts."
+      },
+      {
+        "name": "Fair interim process",
+        "zero": "Sacrifices a party's urgent interest without explanation.",
+        "one": "Mentions delay without addressing actual harm.",
+        "two": "Identifies what can be done today, safeguards the opposing interest and specifies an accessible next step."
+      }
+    ]
+  },
+  {
+    "id": "C14",
+    "title": "Delay and adjournment",
+    "construct": "Distinguishes necessary preparation from repeated postponement and uses available hearing time without compromising fair testing.",
+    "cases": [
+      {
+        "title": "The fourth wage hearing",
+        "record": "A wage claimant has travelled overnight. New payroll sheets arrived yesterday. Respondent's senior counsel is unavailable but junior counsel is present.",
+        "decision": "Decide what can fairly be heard today."
+      },
+      {
+        "title": "The elderly witness",
+        "record": "An elderly witness has travelled from another district. Counsel awaiting a translation asks to postpone everything; the witness can speak to uncontested timing separately.",
+        "decision": "Protect the evidence and the right to challenge it."
+      },
+      {
+        "title": "Missing survey page",
+        "record": "A land survey bundle lacks a page. The parties agree on boundaries in two of three plots, and the mapper can be called this afternoon.",
+        "decision": "Choose how to use the remaining court time."
+      },
+      {
+        "title": "Pending settlement",
+        "record": "A party says settlement is imminent. Its last three updates said the same. The claimant's family depends on payment and the offer is unsigned.",
+        "decision": "Decide whether another postponement is justified."
+      },
+      {
+        "title": "Late laboratory note",
+        "record": "A short technical note arrived after service time. A specialist can explain it tomorrow; one factual witness is present today and unrelated to the technical point.",
+        "decision": "Allocate hearing time between the available issues."
+      },
+      {
+        "title": "Repeated official absence",
+        "record": "A records officer ignores a second summons, citing official travel. Service is documented. Both advocates agree copies exist but dispute their completeness.",
+        "decision": "Choose an effective next step without presuming contempt."
+      },
+      {
+        "title": "Counsel unwell",
+        "record": "Counsel supplies a medical note and seeks two weeks. The case concerns temporary accommodation expiring Friday. The opponent offers to narrow the immediate issue.",
+        "decision": "Plan a fair response to the request."
+      },
+      {
+        "title": "Translation gap",
+        "record": "Pages in a land register remain untranslated due to registry error. The party relying on them can identify the relevant entries. Costs of repeated travel are evidenced.",
+        "decision": "Address translation and decide what can proceed now."
+      },
+      {
+        "title": "Unexpected representation",
+        "record": "A self-represented party now has legal aid and asks for time to brief counsel. One earlier delay was caused by failed service; the claimant faces recurring rent arrears.",
+        "decision": "Decide how much preparation is warranted and what must happen meanwhile."
+      },
+      {
+        "title": "Hearing overruns",
+        "record": "An earlier trial leaves only thirty minutes for a maintenance application. Written admissions narrow the dispute, but one contested expense requires a response.",
+        "decision": "Choose the work that can fairly be completed before adjournment."
+      }
+    ],
+    "developments": [
+      "A proposed next date conflicts with the deadline for an essential payment. A document supports the date, but the amount owed remains contested.",
+      "Counsel offers to stipulate one fact if the remaining contested issue is reserved. The other party agrees to the fact but disputes the proposed delay.",
+      "The record reveals that one previous postponement attributed to a party was actually caused by the registry. The corrected chronology is accepted.",
+      "A person who must participate will be unavailable at the next ordinary listing. A short special slot is available for a defined issue this week.",
+      "One side offers to cover travel costs if the entire hearing moves. The other identifies a harm that money after the hearing would not remedy."
+    ],
+    "tasks": [
+      "Decide the request and give an operative timetable with responsibility for each preparatory step.",
+      "Identify what can be heard now without ambush, what requires preparation and a safeguard for effective cross-examination.",
+      "Compare granting and refusing the request against the corrected record and explain any narrower procedural alternative.",
+      "Write instructions that the parties and registry could follow if the next deadline is missed. Set a specific review or return route."
+    ],
+    "criteria": [
+      {
+        "name": "Accurate attribution",
+        "zero": "Blames a party on an unsupported or corrected delay history.",
+        "one": "Mentions history but leaves the material cause unexplored.",
+        "two": "Separates party, registry and unavoidable causes and applies the new development."
+      },
+      {
+        "name": "Effective use of time",
+        "zero": "Grants or refuses all relief without examining separable work.",
+        "one": "Mentions narrowing but gives no executable step.",
+        "two": "Identifies a genuinely separable issue or explains why none can proceed fairly."
+      },
+      {
+        "name": "Enforceable timetable",
+        "zero": "Says list in due course without addressing concrete harm.",
+        "one": "Sets a date without owner or contingency.",
+        "two": "Sets realistic duties, dates and a remedy for the specific harm or default."
+      }
+    ]
+  },
+  {
+    "id": "C15",
+    "title": "Ex parte interim relief",
+    "construct": "Tests urgency, disclosure, reversibility and early return before restricting an absent person's position.",
+    "cases": [
+      {
+        "title": "Demolition notice",
+        "record": "A resident seeks to stop demolition at dawn. They produce a photograph of an undated notice and admit missing two earlier letters. The authority has a duty contact.",
+        "decision": "Decide the extent of immediate protection and notice."
+      },
+      {
+        "title": "Bank attachment",
+        "record": "A supplier requests an immediate freeze of all company accounts based on one transfer. Payroll falls due tomorrow and the company has not been served.",
+        "decision": "Set a proportionate provisional response to the alleged dissipation."
+      },
+      {
+        "title": "Tree removal",
+        "record": "Residents seek to halt removal of a mature tree. The contractor says a limb threatens pedestrians. A safety assessment is mentioned but not attached.",
+        "decision": "Choose between preservation and immediate safety on an incomplete record."
+      },
+      {
+        "title": "Examination portal",
+        "record": "A student asks for admission to an exam that begins tomorrow. The admit card is missing; the university's automated rejection gives no reason. Seats are numbered.",
+        "decision": "Address provisional participation without resolving final eligibility."
+      },
+      {
+        "title": "Seizing a server",
+        "record": "An employer wants a former worker's laptop seized on suspicion of copied files. An access log is ambiguous and the device also holds personal records.",
+        "decision": "Determine what evidence preservation can justifiably be ordered."
+      },
+      {
+        "title": "Eviction during rain",
+        "record": "Occupants seek shelter from an imminent clearance. The land authority's notice mentions drainage work but omits the work schedule. Alternative shelter is disputed.",
+        "decision": "Set any immediate occupancy protection and the return process."
+      },
+      {
+        "title": "Withholding publication",
+        "record": "A petitioner seeks a broad restraint on an article scheduled for release. They provide a headline and allege disclosure of a minor's name; the draft is unavailable.",
+        "decision": "Decide whether a limited urgent direction is supportable."
+      },
+      {
+        "title": "Medicine shipment",
+        "record": "A hospital requests release of a detained shipment. A label discrepancy is accepted and critical stock runs out tomorrow. No regulator has yet been heard.",
+        "decision": "Frame an interim step that accounts for patient and safety risks."
+      },
+      {
+        "title": "Auction tomorrow",
+        "record": "A borrower seeks to stop an auction the next morning. The notice was properly received, but the borrower alleges a last-minute payment was omitted from the balance.",
+        "decision": "Determine the least prejudicial way to preserve any effective remedy."
+      },
+      {
+        "title": "Service cut-off",
+        "record": "A utility subscriber seeks immediate reconnection during a heat alert. Bills conflict on arrears and the utility's safety inspection is incomplete.",
+        "decision": "Decide what temporary service or alternative protection can be arranged."
+      }
+    ],
+    "developments": [
+      "The applicant discloses a prior refusal of similar relief. The previous order turned on a fact that may have changed; there is no time for full evidence tonight.",
+      "The affected respondent can join by telephone in twenty minutes. One side says that short delay itself risks the feared harm and supplies an imperfect timestamp.",
+      "The applicant offers security against financial loss. The affected person identifies a separate irreversible consequence that security would leave uncovered.",
+      "The registry can serve a limited order today but cannot effect general notice before the threatened event. The applicant seeks substantially broader relief.",
+      "A new record reduces the likelihood of the feared harm but increases the cost if it occurs. The respondent still has not received the full papers."
+    ],
+    "tasks": [
+      "Give a time-limited operative order or decline relief. Identify the evidence, service duty and earliest return hearing.",
+      "Explain why a narrower measure succeeds or fails, including the price the absent party would pay if you are wrong.",
+      "Separate the facts requiring immediate protection from those requiring notice. Define the procedure for urgent variation.",
+      "Test the applicant's disclosure and explain what can safely be decided after the new development in the time available."
+    ],
+    "criteria": [
+      {
+        "name": "Urgency and candour",
+        "zero": "Assumes urgency or ignores materially adverse disclosure.",
+        "one": "Identifies urgency without testing evidence or notice options.",
+        "two": "Tests both the threatened event and contrary record and explains what notice is feasible now."
+      },
+      {
+        "name": "Proportionality",
+        "zero": "Imposes open-ended or excessive relief.",
+        "one": "Names a narrower measure without weighing opposing harm.",
+        "two": "Explains scope, reversibility and the concrete consequences of a mistaken grant or refusal."
+      },
+      {
+        "name": "Prompt return",
+        "zero": "Offers no route for the absent party to respond.",
+        "one": "Provides notice or a date without an effective opportunity to vary.",
+        "two": "Names service arrangements, the earliest meaningful return and an accessible route to modification."
+      }
+    ]
+  },
+  {
+    "id": "C16",
+    "title": "Recusal and the judge's own connections",
+    "construct": "Discloses relevant facts and assesses apparent partiality while protecting the parties against delay, strategic objection and unfair substantive orders.",
+    "cases": [
+      {
+        "title": "Former chambers",
+        "record": "Current counsel shared chambers with the judge five years earlier. A party calls the relationship ongoing but supplies only an old directory. An interim order expires tomorrow.",
+        "decision": "Plan disclosure, submissions and any allocation request."
+      },
+      {
+        "title": "An investment account",
+        "record": "A judge discovers a pooled investment may hold shares in a party's parent company. The exact exposure is unclear. An urgent payment dispute is listed today.",
+        "decision": "Decide what to verify and what business can be transacted meanwhile."
+      },
+      {
+        "title": "An unpaid role",
+        "record": "The judge is unpaid trustee of a charity that endorsed a party's public campaign. The charity did not join the case and its endorsement preceded appointment.",
+        "decision": "Decide what to disclose and how to handle the objection."
+      },
+      {
+        "title": "Family employment",
+        "record": "A close relative works in a different division of a respondent company. Counsel denies any connection to the dispute; the case file does not identify the relevant staff.",
+        "decision": "Determine the necessary inquiry without exposing irrelevant family details."
+      },
+      {
+        "title": "Conference remarks",
+        "record": "A recorded lecture by the judge discussed a general legal question now in dispute. A short excerpt is circulating; a party says it prejudges the facts of this case.",
+        "decision": "Decide what weight to give the lecture and what process to use."
+      },
+      {
+        "title": "Former client",
+        "record": "An institutional party appeared on the judge's former client list. The current dispute arose years later and the underlying retainer is confidential.",
+        "decision": "Test whether the relationship has a material connection to the present issue."
+      },
+      {
+        "title": "Prior intermediary",
+        "record": "A witness informally arranged a community event with the judge last year. Both say they have no ongoing relationship. Witness credibility is central to the hearing.",
+        "decision": "Determine whether a disclosure or reassignment is warranted."
+      },
+      {
+        "title": "Ongoing dispute",
+        "record": "A barrister appearing today represents someone in a private dispute involving the judge's family. A short urgent application is ready and a replacement judge may sit tomorrow.",
+        "decision": "Assess whether to sit and how to preserve urgent interests."
+      },
+      {
+        "title": "Online endorsement",
+        "record": "An unverified screenshot appears to show the judge endorsing an organisation aligned with one side. The account name differs slightly from the judge's published identifier.",
+        "decision": "Set a fair procedure to establish attribution and determine the objection."
+      },
+      {
+        "title": "Earlier procedural order",
+        "record": "The judge previously ruled against the applicant on disclosure. A recusal application quotes forceful language from that order; an unquoted paragraph reserved the merits.",
+        "decision": "Decide whether the wording or surrounding facts justify a change of bench."
+      }
+    ],
+    "developments": [
+      "A contemporaneous document narrows the connection substantially, but the party raising the objection has not seen it and requests a short opportunity to respond.",
+      "The remaining parties consent to the judge sitting. One affected person lacks advice and is reluctant to disagree in open court.",
+      "The only replacement bench available this week can hear an urgent protective application but cannot begin a full hearing until next month.",
+      "The objection was raised after an adverse procedural ruling. It is disputed whether the objector could reasonably have discovered the connection earlier.",
+      "Full disclosure of a supporting document would reveal unrelated private information. A redacted summary can be supplied to all parties today."
+    ],
+    "tasks": [
+      "State precisely what you would disclose and invite the parties to address. Give the next effective step while a decision is pending.",
+      "Draft a reasoned disposition of the objection on the available record, identifying the strongest argument against your decision.",
+      "Decide who may handle any urgent interim business and the safeguards needed to preserve fairness and avoid avoidable delay.",
+      "Explain how you would record material facts and obtain a reviewable decision without forcing a litigant to personally accuse the judge."
+    ],
+    "criteria": [
+      {
+        "name": "Connection and evidence",
+        "zero": "Treats rank, an allegation or private assurance as dispositive.",
+        "one": "Signals a connection but leaves reliability or relevance unexplained.",
+        "two": "Separates verified facts, disputed claims and their link to the matter under decision."
+      },
+      {
+        "name": "Fair appraisal",
+        "zero": "Treats consent, lateness or personal conviction as sufficient.",
+        "one": "Invites views without addressing a credible competing inference.",
+        "two": "Enables informed submissions and explains the competing objective inferences from the particular record."
+      },
+      {
+        "name": "Procedural protection",
+        "zero": "Leaves urgent rights exposed or proceeds straight to final determination.",
+        "one": "Mentions reassignment or preservation without practical arrangements.",
+        "two": "Defines who can act when, what remains open and how reasons can be challenged."
+      }
+    ]
+  },
+  {
+    "id": "C17",
+    "title": "Confidentiality and withheld evidence",
+    "construct": "Separates justified protection of sensitive sources from conclusions a party cannot meaningfully contest.",
+    "cases": [
+      {
+        "title": "Licence renewal",
+        "record": "A licensing authority relies on a confidential inspection note. The applicant knows the date but not the alleged breach. The note also identifies a vulnerable informant.",
+        "decision": "Decide what can be used and what disclosure would enable a response."
+      },
+      {
+        "title": "School discipline",
+        "record": "A pupil's exclusion rests on accounts from other minors. The school refuses to disclose any account. The pupil accepts being present but disputes what happened.",
+        "decision": "Frame disclosure and hearing arrangements before relying on the accounts."
+      },
+      {
+        "title": "Workplace investigation",
+        "record": "A sealed file includes medical details and a chronology of absence. Only the dates are directly relevant. Both sides dispute who supplied the chronology.",
+        "decision": "Determine how to isolate and test material evidence."
+      },
+      {
+        "title": "Housing allocation",
+        "record": "An adverse eligibility decision relies on another applicant's file. The authority says disclosure would reveal the other household's location. A comparative score is central.",
+        "decision": "Resolve the request for a meaningful opportunity to contest the comparison."
+      },
+      {
+        "title": "Public tender",
+        "record": "An unsuccessful bidder seeks the scoring sheets. A rival claims trade secrecy over pricing formulae, though the published decision turns on a quality criterion.",
+        "decision": "Determine what parts are genuinely necessary to contest the award."
+      },
+      {
+        "title": "Prison placement",
+        "record": "An internal note alleges a threat and is offered only in confidence. The prisoner disputes the timing of an incident. A transfer is imminent and a source may face retaliation.",
+        "decision": "Plan interim protection and scrutiny of the undisclosed allegation."
+      },
+      {
+        "title": "Child placement",
+        "record": "A welfare assessment in a sealed report records disputed events and the child's address. Counsel requests complete access before a time-sensitive contact hearing.",
+        "decision": "Determine what each party needs in order to answer fairly."
+      },
+      {
+        "title": "Tax comparison",
+        "record": "The authority uses data from another firm to support a valuation. It refuses the raw data. The taxpayer challenges the comparison period and the sample size.",
+        "decision": "Decide whether an aggregate or redacted account permits a meaningful challenge."
+      },
+      {
+        "title": "Hazard inspection",
+        "record": "A regulator's unpublished diagram identifies a site's security weak points. The affected operator seeks to challenge the assertion about distances in the diagram.",
+        "decision": "Consider an alternative to wholesale disclosure or wholesale secrecy."
+      },
+      {
+        "title": "Witness relocation",
+        "record": "A witness statement includes a new address alongside the alleged observation. Defence challenges identification conditions, not present location. The prosecutor seeks blanket sealing.",
+        "decision": "Determine the scope of protection and any permissible reliance."
+      }
+    ],
+    "developments": [
+      "An agreed redacted extract preserves the dates but removes the basis of the contested inference. The withholding party insists the missing part is essential.",
+      "The party claiming confidentiality now offers a neutral summary. The opponent identifies a specific factual question the summary leaves unanswered.",
+      "The sensitive source cannot be heard today, but a publicly available record could test a material part of the same claim.",
+      "An inadvertent partial disclosure has reached one advocate. The client and the other participants have not seen it and its accuracy is disputed.",
+      "The party seeking secrecy would withdraw one allegation rather than disclose its basis but asks to rely on a related conclusion from the same material."
+    ],
+    "tasks": [
+      "Specify what may be withheld, disclosed or disregarded and how the parties may test any remaining adverse inference.",
+      "Design the minimum disclosure and hearing sequence. State what you will do if a meaningful answer remains impossible.",
+      "Write the reasons that can be made public, identify the narrow issue needing protected treatment and set a review point.",
+      "Compare redaction, summary and independent verification on these particular facts. Choose a workable route and explain its limits."
+    ],
+    "criteria": [
+      {
+        "name": "Need for secrecy",
+        "zero": "Accepts a label as sufficient or orders indiscriminate disclosure.",
+        "one": "Recognises sensitivity without isolating the material issue.",
+        "two": "Identifies the actual risk, contested inference and information essential to test it."
+      },
+      {
+        "name": "Effective response",
+        "zero": "Makes adverse findings solely on unanswerable material.",
+        "one": "Offers a summary or hearing without checking adequacy.",
+        "two": "Tests whether the response procedure permits a concrete challenge and limits reliance if it does not."
+      },
+      {
+        "name": "Proportional procedure",
+        "zero": "Gives no implementable protection or opportunity for review.",
+        "one": "Names an alternative without sequence or timing.",
+        "two": "Specifies disclosure, handling, return and consequences if the material remains unavailable."
+      }
+    ]
+  },
+  {
+    "id": "C18",
+    "title": "Remedies, compliance and enforcement",
+    "construct": "Traces what an order actually delivered, identifies the responsible actor and distinguishes inability, misdirection and deliberate noncompliance.",
+    "cases": [
+      {
+        "title": "Benefit credited elsewhere",
+        "record": "The department marks a benefit paid. The claimant's passbook has no entry. The transaction list shows a matching first name and a different account suffix.",
+        "decision": "Decide what counts as delivery and which records to reconcile."
+      },
+      {
+        "title": "Ramp at a clinic",
+        "record": "A works report records a completed ramp. A user photograph shows the entrance locked. The contractor says a separate facilities department controls the key.",
+        "decision": "Assign the unresolved duties and verify usable access."
+      },
+      {
+        "title": "Approved water point",
+        "record": "A village tap has been installed under a prior order. Residents report no water during daytime. A pressure log covers only the night shift.",
+        "decision": "Test functional delivery and decide the next direction."
+      },
+      {
+        "title": "Release message",
+        "record": "A release instruction reached a central inbox. Custodial staff did not see it before the evening shift change. The person's designated lawyer is difficult to reach.",
+        "decision": "Verify receipt and arrange effective implementation without delay."
+      },
+      {
+        "title": "Restoration of wages",
+        "record": "A reinstated worker receives current wages but no arrears. The earlier order referred to a schedule which the payroll unit never received.",
+        "decision": "Clarify the enforceable obligation and avoid punishing an evidentiary gap."
+      },
+      {
+        "title": "School place",
+        "record": "The school says a place has been allocated under a prior order. The admission letter requires a fee the claimant says the order waived. The signed order distinguishes tuition and transport.",
+        "decision": "Identify which step prevents actual access and whether it is covered."
+      },
+      {
+        "title": "Returned property",
+        "record": "A property release certificate lists six items. Only four are present at collection and the receipt form requires acknowledgment of all six.",
+        "decision": "Design an auditable handover preserving the dispute about the balance."
+      },
+      {
+        "title": "Eviction stay delivered late",
+        "record": "A stay order was emailed to a district office. A contractor began clearance before reading it. The parties dispute when the responsible officer received notice.",
+        "decision": "Determine immediate repair and what facts must precede any finding of fault."
+      },
+      {
+        "title": "Missing case file",
+        "record": "Reconstruction of a file was ordered. The registry prepared a checklist but omitted the disputed annexure. A party has a copy whose completeness the other side disputes.",
+        "decision": "Frame verification and an effective next step for the main case."
+      },
+      {
+        "title": "Medical appointment",
+        "record": "A patient obtained the ordered referral. The hospital booked an appointment months beyond the stated urgency window, citing capacity. The referral centre lists a nearer open slot.",
+        "decision": "Decide whether the practical result fulfils the direction and what is feasible."
+      }
+    ],
+    "developments": [
+      "The authority offers a completion certificate signed by the person who supervised the disputed step. An independent check can be made tomorrow.",
+      "The officer originally named has been transferred. The successor accepts responsibility for future action but disputes personal knowledge of past events.",
+      "An urgent interim measure would reduce the claimant's loss while verification proceeds. The authority identifies a credible resource constraint.",
+      "Part of the original direction is ambiguous. Both parties acted on different readings, and the operative parts of their accounts can be independently checked.",
+      "The authority concedes the intended result has not been delivered but offers two routes with different deadlines and costs to the claimant."
+    ],
+    "tasks": [
+      "Draft a compliance order with a responsible office, evidence of actual delivery, service route and date to reconsider.",
+      "Separate immediate repair from attribution of fault. Identify what must be heard before making a personal finding.",
+      "Calculate the practical burden of another referral and choose a proportionate verification route the claimant can use.",
+      "Define completion in terms the claimant can verify. Address partial performance, a missed deadline and who must report back."
+    ],
+    "criteria": [
+      {
+        "name": "Actual effect",
+        "zero": "Accepts internal dispatch or a certificate as conclusive.",
+        "one": "Identifies a gap without testing what reached the person.",
+        "two": "Uses case-specific evidence to distinguish administrative action from the practical result."
+      },
+      {
+        "name": "Responsibility and fairness",
+        "zero": "Assigns personal blame on an incomplete record.",
+        "one": "Identifies an office without distinguishing past fault and future duty.",
+        "two": "Allocates implementation responsibility and identifies what evidence and hearing are needed for fault."
+      },
+      {
+        "name": "Effective remedy",
+        "zero": "Repeats the original direction without a feedback route.",
+        "one": "Adds a deadline without proof of delivery or default arrangements.",
+        "two": "Sets feasible steps, verification with the affected party, timing and return on default."
+      }
+    ]
+  },
+  {
+    "id": "C19",
+    "title": "Precedent, dissent and distinguishing facts",
+    "construct": "Reconstructs the controlling proposition and tests its factual and procedural limits without treating a dissent or headnote as the holding.",
+    "cases": [
+      {
+        "title": "Notice at the gate",
+        "record": "In the exercise a binding majority held notice adequate when documents were handed to an authorised representative. Here a gate guard signed but denies authority. The dissent required personal service in all cases.",
+        "decision": "Apply the governing proposition to the proof of authority."
+      },
+      {
+        "title": "A continuing payment",
+        "record": "The binding case allowed a claim over monthly payments still falling due. Here some payments continue but a separate lump-sum decision became final years ago. A headnote describes every payment claim as continuing.",
+        "decision": "Decide whether the two components travel together."
+      },
+      {
+        "title": "Access during repairs",
+        "record": "The binding precedent allowed temporary closure with an accessible alternative nearby. Here the alternative is locked at some hours. Counsel cites a concurring opinion favouring closure on cost alone.",
+        "decision": "Identify the controlling condition and the evidence needed here."
+      },
+      {
+        "title": "The consent minute",
+        "record": "A higher court approved a settlement without deciding a disputed statutory issue. Counsel presents the consent order as a ruling that all similar applicants qualify. An earlier binding decision requires a factual inquiry.",
+        "decision": "Identify what was adjudicated and what remains open."
+      },
+      {
+        "title": "Changed form",
+        "record": "In the binding case an unsigned notice was invalid under a form expressly requiring signature. The current stipulated form allows authenticated electronic issue. Authentication is contested.",
+        "decision": "Decide what carries across from the earlier decision."
+      },
+      {
+        "title": "Interim versus final",
+        "record": "The binding case preserved possession for seven days before hearing both parties. The applicant seeks final title using one sentence from that interim order. Independent title records conflict.",
+        "decision": "Explain the effect of the procedural posture on the requested relief."
+      },
+      {
+        "title": "Delegation memorandum",
+        "record": "A binding majority upheld delegation under an express written instrument. In the present record a memorandum is unsigned and may be a draft. A dissent doubted whether the power was delegable at all.",
+        "decision": "Decide the question under the majority and test the document."
+      },
+      {
+        "title": "Common cause list",
+        "record": "An earlier binding ruling permitted grouped hearings when all claimants accepted the same factual record. Three present claimants dispute the underlying measurements. The reported summary leaves out consent.",
+        "decision": "Decide how far grouping remains appropriate."
+      },
+      {
+        "title": "Emergency exception",
+        "record": "A binding case recognised a short exception to prior notice where contemporaneous reasons documented imminent harm. Present reasons were written after the event. One dated photograph may support the official account.",
+        "decision": "Determine what the exception requires on today's record."
+      },
+      {
+        "title": "Two operative reasons",
+        "record": "A binding decision relied on both lack of authority and missing notice. Here authority is documented but service remains disputed. Counsel quotes only the first reason to say the entire defence fails.",
+        "decision": "Analyse which reason still bears on the present issue."
+      }
+    ],
+    "developments": [
+      "Counsel supplies the full operative passage. A qualification absent from the supplied extract requires express treatment, but its factual application is disputed.",
+      "One party concedes a factual difference and argues it has no bearing on the legal rationale. The other says the difference is decisive but offers little explanation.",
+      "A later persuasive opinion criticises the binding approach and suggests a different policy. In this exercise it has no authority to displace the stipulated binding rule.",
+      "The prevailing party offers a narrow disposition that avoids deciding whether the precedent governs every case in this category. The opponent wants a general declaration.",
+      "A key fact needed for applying the binding proposition cannot be established today. A limited evidentiary hearing is available next week at a cost to both parties."
+    ],
+    "tasks": [
+      "Write the shortest accurate statement of the binding proposition and explain its application and limits on this record.",
+      "Identify the strongest argument for distinguishing the case, answer it and state any fact that could change the outcome.",
+      "Separate binding reasoning, persuasive material and unresolved evidence. Dictate an appropriate disposition without widening the holding.",
+      "Explain to the losing party which parts of the earlier case control and what issue, if any, remains open for future determination."
+    ],
+    "criteria": [
+      {
+        "name": "Accurate authority",
+        "zero": "Treats a dissent, summary or consent as deciding the disputed issue.",
+        "one": "Names the authority without identifying its operative proposition.",
+        "two": "States the binding proposition and separates it from nonbinding or procedural material."
+      },
+      {
+        "name": "Material distinction",
+        "zero": "Assumes factual similarity or difference decides the matter.",
+        "one": "Lists differences without relating them to the rationale.",
+        "two": "Connects the decisive difference and new development to the reason the rule applies or fails."
+      },
+      {
+        "name": "Calibrated disposition",
+        "zero": "Makes a general ruling unsupported by the record.",
+        "one": "States an outcome but omits the unresolved issue.",
+        "two": "Limits the decision to established facts and explains the procedural consequence of any remaining gap."
+      }
+    ]
+  },
+  {
+    "id": "C20",
+    "title": "Appellate correction and scope of further hearing",
+    "construct": "Identifies the reversible error and preserves fair fact-finding while limiting the burden of rehearing.",
+    "cases": [
+      {
+        "title": "Wrong pay period",
+        "record": "A wage tribunal counted the wrong months. Agreed payroll records resolve two months; a third month's attendance remains disputed. Both parties can make short submissions today.",
+        "decision": "Decide which part can be corrected now and what needs further hearing."
+      },
+      {
+        "title": "Unheard tenant",
+        "record": "A possession order relied on a notice the tenant never received. The landlord says the result is inevitable; service and actual occupation remain disputed. The tenant can be heard promptly.",
+        "decision": "Determine the appropriate scope of further proceedings."
+      },
+      {
+        "title": "Bad inference at charge stage",
+        "record": "A lower order equated a job title with participation. A document possibly linking the accused to payment was neither addressed nor explained by the parties.",
+        "decision": "Choose a correction that observes the stipulated preliminary threshold."
+      },
+      {
+        "title": "Benefits after remittal",
+        "record": "A benefits application has been remitted twice. The present order ignored a mandatory eligibility field. Nearly all supporting records are admitted, but one date is illegible.",
+        "decision": "Choose between focused fact-finding and another broad remand."
+      },
+      {
+        "title": "Witness excluded",
+        "record": "A time-limit ruling excluded a defence witness. An agreed proffer shows the witness bears on one of two independent issues. Recalling everyone would take months.",
+        "decision": "Determine what prejudice occurred and what must be reopened."
+      },
+      {
+        "title": "Incorrect map",
+        "record": "An award uses a map both sides now accept is obsolete. The alternative survey affects two parcels only. Possession of a third parcel was decided on independent evidence.",
+        "decision": "Identify the unaffected findings and define any rehearing."
+      },
+      {
+        "title": "Wrong remedial power",
+        "record": "A lower bench ordered an official to make a policy choice beyond the power stipulated for this exercise. A separate complaint about denial of an existing benefit was never answered.",
+        "decision": "Correct the scope of relief while preserving the undecided claim."
+      },
+      {
+        "title": "Ambiguous correction",
+        "record": "A clerical correction changed the total compensation and may have altered the liability split. The operative reasons appear to support only an arithmetic adjustment.",
+        "decision": "Distinguish clerical repair from a substantive rehearing."
+      },
+      {
+        "title": "Fresh school record",
+        "record": "An appellate party offers a school register to challenge a material date. Its lateness is explained but its authenticity remains contested. The existing findings depend in part on that date.",
+        "decision": "Set a fair process for deciding whether to receive and use the record."
+      },
+      {
+        "title": "Reasons copied",
+        "record": "The lower order reproduced one party's submission without addressing an admitted receipt. The receipt concerns only one payment. Remaining liability turns on independent findings.",
+        "decision": "Determine what requires fresh reasons and how to avoid duplicate litigation."
+      }
+    ],
+    "developments": [
+      "Both sides now agree on a fact that previously required remittal. They disagree on its legal effect and can address that effect today.",
+      "A comprehensive rehearing would impose documented travel and subsistence costs on one party. A focused hearing is available sooner but would leave one contested point unresolved.",
+      "The affected person was absent below and asks for one opportunity to answer material the successful party considers conclusive. A short response can be arranged.",
+      "One party proposes correcting the operative direction immediately and reserving costs. The other says the correction assumes a disputed fact outside the admitted record.",
+      "The parties accept that part of the original order is independent of the identified error. They disagree over which remaining findings depend upon it."
+    ],
+    "tasks": [
+      "Draft the appellate operative paragraphs. Enumerate what stands, what is reopened, who must hear it and by when.",
+      "Explain the prejudice caused by the original error and compare deciding now with a focused remittal on the updated record.",
+      "Design the minimum fair rehearing, including what each party may contest and how any interim position is preserved.",
+      "Explain the corrected outcome to the party who has already attended several hearings. Identify the next effective step and what need not be proved again."
+    ],
+    "criteria": [
+      {
+        "name": "Error and prejudice",
+        "zero": "Reopens everything or affirms without locating the error.",
+        "one": "Identifies error without connecting it to a finding or party.",
+        "two": "Traces the identified error and new fact to the specific finding and opportunity it affected."
+      },
+      {
+        "name": "Scope and fair hearing",
+        "zero": "Decides contested facts without a hearing or reopens independent findings.",
+        "one": "Mentions remittal without defining its boundary.",
+        "two": "Separates settled and disputed matters and explains who may decide each after what process."
+      },
+      {
+        "name": "Practicable correction",
+        "zero": "Leaves parties to begin again without workable directions.",
+        "one": "Gives a broad remedy without timing or implementation.",
+        "two": "States the operative correction, practical next step, interim position where needed and return timetable."
+      }
+    ]
+  }
+]

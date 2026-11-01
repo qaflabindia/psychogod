@@ -1,0 +1,902 @@
+[
+  {
+    "id": "C01",
+    "title": "Repeated administrative referrals",
+    "construct": "Resolve legal and factual bottlenecks without displacing the responsible decision-maker. Each applicant has already received at least one forwarding order.",
+    "cases": [
+      {
+        "title": "Widow's pension",
+        "record": "The pension board accepts qualifying service but says Treasury holds the beneficiary match. Treasury says the board must first sanction payment.",
+        "decision": "Decide how responsibility for sanction and payment should be allocated."
+      },
+      {
+        "title": "Wheelchair grant",
+        "record": "The equipment office approved eligibility but the district office questions whether the quoted wheelchair fits the grant. A second assessment would require travel.",
+        "decision": "Decide who should resolve specification and how to preserve the applicant's access."
+      },
+      {
+        "title": "Crop relief",
+        "record": "An inspection lists the tenant's crop damage under the owner's account. Both filed claims and neither has been heard together.",
+        "decision": "Define the issue for a decision without prejudging the competing claim."
+      },
+      {
+        "title": "Wage arrears",
+        "record": "The department admits attendance but says the contractor paid cash. The contractor filed an unsigned payment sheet.",
+        "decision": "Decide which part of the payment dispute can be resolved and by whom."
+      },
+      {
+        "title": "Student stipend",
+        "record": "A district clerk accepted the application before closing day. A server timestamp shows central receipt one day late. Both offices refer to the other date.",
+        "decision": "Identify the effective date issue and the evidence needed to decide it."
+      },
+      {
+        "title": "Food card transfer",
+        "record": "Both districts accept residency evidence. Each database marks the household active in the other district; the household has collected no grain for two months.",
+        "decision": "Decide whether a registry correction or a fresh entitlement determination is required."
+      },
+      {
+        "title": "Flood rebuilding grant",
+        "record": "A field survey approved rebuilding, but the planning map puts the plot in a restricted zone. The families affected received the same referral letter.",
+        "decision": "Separate common mapping questions from individual entitlement."
+      },
+      {
+        "title": "Reimbursement of treatment",
+        "record": "The fund accepts the hospital bill but disputes preauthorisation. The hospital says its own portal was down on admission day.",
+        "decision": "Decide how to obtain the outage evidence without making the patient chase both institutions."
+      },
+      {
+        "title": "Apprentice certificate",
+        "record": "The training centre accepts completion, but the issuing office doubts the supervisor's authority. The applicant loses a job offer next week.",
+        "decision": "Decide whether an interim verification or a final direction is supportable."
+      },
+      {
+        "title": "Freight permit refund",
+        "record": "The licensing officer admits duplicate collection but reports an old government debt. The debt unit cannot locate a signed demand.",
+        "decision": "Define which amount is conceded and what hearing is needed on set-off."
+      }
+    ],
+    "developments": [
+      "A newly produced delegation names one officer with power to issue the underlying decision. Both agencies accept the document.",
+      "A dated receipt identifies a third person whose existing benefit or priority would change if the claim were granted in full.",
+      "The authority offers a signed, time-bound partial remedy that leaves the applicant's main contested ground undecided.",
+      "A fresh chronology suggests the applicant was expressly refused relief years earlier. They say service of that refusal went to the wrong address.",
+      "The responsible office concedes that its archive lost the only original. An independently held copy covers part of the disputed period."
+    ],
+    "tasks": [
+      "Draft the enforceable operative paragraphs and specify when the applicant can return without filing a new claim.",
+      "Give a preliminary ruling identifying what can be decided now and the material still needed for the remainder.",
+      "Address the strongest reason to terminate the proceeding today and the strongest reason to keep it under supervision.",
+      "Explain the order directly to the applicant, including who must act first and what happens if that person does nothing."
+    ],
+    "criteria": [
+      {
+        "name": "Competence and threshold",
+        "zero": "Merely forwards the file.",
+        "one": "Identifies a possible decision-maker without resolving its disputed responsibility.",
+        "two": "Uses record facts to assign the right decision or specify how competence will be resolved."
+      },
+      {
+        "name": "Contrary material",
+        "zero": "Treats an admission or objection as disposing of everything.",
+        "one": "Flags the disputed point without addressing its effect.",
+        "two": "Separates admitted and disputed issues, hearing affected interests before adverse findings."
+      },
+      {
+        "name": "Effective remedy",
+        "zero": "Gives an indefinite direction to consider.",
+        "one": "Sets a deadline without a communication or default mechanism.",
+        "two": "Assigns the task, timing, communication and accessible response to default."
+      }
+    ]
+  },
+  {
+    "id": "C02",
+    "title": "Independent scrutiny of arrest and remand",
+    "construct": "Scrutinise the basis and purpose of coercive custody using the stated facts and available alternatives.",
+    "cases": [
+      {
+        "title": "Seized phone",
+        "record": "Police seek custody to recover messages from a phone already seized. The defence identifies a cloud account still under the suspect's control.",
+        "decision": "Decide what investigative step, if any, actually requires custody."
+      },
+      {
+        "title": "Witness contact",
+        "record": "A complainant reports a call after arrest. The caller ID belongs to a relative and the accused has had no phone in detention.",
+        "decision": "Decide whether the contact can fairly support detention."
+      },
+      {
+        "title": "Unidentified lookout",
+        "record": "Officers arrested a person matching a clothing description. CCTV excludes one suspect but gives no clear face; an identification exercise is proposed.",
+        "decision": "Assess the need for continued custody pending identification."
+      },
+      {
+        "title": "Warehouse keys",
+        "record": "Police say tools are hidden in a locked depot. A landlord offers lawful access and says the accused returned the keys yesterday.",
+        "decision": "Distinguish a search requiring access from a request requiring custody."
+      },
+      {
+        "title": "Interstate arrest",
+        "record": "The diary records an arrest at 07:00. A toll record and signed receipt suggest control began the previous evening.",
+        "decision": "Resolve which custody timeline needs checking before authorisation."
+      },
+      {
+        "title": "Untranslated reasons",
+        "record": "A written notice of grounds bears a thumb mark. Counsel reports the accused cannot read that language; the officer says an interpreter explained it.",
+        "decision": "Decide whether and how communication of grounds was effective."
+      },
+      {
+        "title": "Hospital ward",
+        "record": "Doctors report a stable condition but recommend observation. The officer offers a general assurance of medical care during interrogation.",
+        "decision": "Decide whether medical needs and investigative steps can be reconciled."
+      },
+      {
+        "title": "Password request",
+        "record": "Officers say the suspect alone knows a password. An expert says the service provider can preserve the records pending legal process.",
+        "decision": "Examine the proposed purpose and alternatives without assuming an obligation to disclose."
+      },
+      {
+        "title": "Second suspect",
+        "record": "Police rely on another accused's interview. A contemporaneous attendance record places this person elsewhere during part of the alleged episode.",
+        "decision": "Assess the individual basis and necessity of the request."
+      },
+      {
+        "title": "Brief production",
+        "record": "Video audio failed during private consultation. The officer says the accused previously waived counsel by a nod recorded in the station diary.",
+        "decision": "Decide whether a meaningful remand hearing can proceed now."
+      }
+    ],
+    "developments": [
+      "A contemporaneous log conflicts with a material assertion in the officer's account. Its author is available to answer questions.",
+      "Duty counsel identifies a preservation step that can be taken without custody. The investigator disputes whether it covers one remaining lead.",
+      "The accused reports an injury incurred after arrest. No private medical assessment has yet been offered.",
+      "An interpreter confirms that one substantive part of the earlier explanation was omitted; the parties disagree about the legal consequence.",
+      "The officer withdraws the stock allegations and relies on a single new, time-sensitive fact that defence counsel has not seen."
+    ],
+    "tasks": [
+      "State the questions you would put to both sides before deciding custody and how the answers could alter your decision.",
+      "Dictate a reasoned custody disposition with immediate directions and a time for review if appropriate.",
+      "Explain what can fairly proceed on this record and what requires verification before liberty can be restricted.",
+      "Respond to the strongest submission against your proposed disposition, including a concrete less restrictive alternative."
+    ],
+    "criteria": [
+      {
+        "name": "Individual scrutiny",
+        "zero": "Accepts the request by formula.",
+        "one": "Identifies a disputed assertion without testing it.",
+        "two": "Tests purpose, chronology and individual evidence before deciding necessity."
+      },
+      {
+        "name": "Hearing and safeguards",
+        "zero": "Orders custody over an unresolved impediment to participation.",
+        "one": "Mentions safeguards but gives no remedial step.",
+        "two": "Secures meaningful participation and addresses the new defect or contested evidence."
+      },
+      {
+        "name": "Limits and alternatives",
+        "zero": "Gives indefinite or unexplained coercive relief.",
+        "one": "Offers an alternative disconnected from the stated risk.",
+        "two": "Connects a bounded direction to the actual risk and explains the availability or insufficiency of alternatives."
+      }
+    ]
+  },
+  {
+    "id": "C03",
+    "title": "Framing charges on individual evidence",
+    "construct": "Apply the stipulated screening task: identify material capable of connecting this accused with the alleged conduct while reserving final credibility findings for trial.",
+    "cases": [
+      {
+        "title": "Circulation list",
+        "record": "A procurement officer's name appears on a distribution list. The approval bears another officer's signature. An email shows the accused asked for a price revision.",
+        "decision": "Decide whether the file connects the accused to the alleged collusion."
+      },
+      {
+        "title": "Vehicle custody",
+        "record": "A van used in a theft is registered to the accused. A lease says it was let to a driver, but a toll payment came from the owner's card.",
+        "decision": "Evaluate the link to participation rather than ownership alone."
+      },
+      {
+        "title": "Altered invoice",
+        "record": "The accused edited a spreadsheet. The audit history shows the edit changed a date, while a different login changed the amount.",
+        "decision": "Separate proof of access from proof of the charged alteration."
+      },
+      {
+        "title": "Shared locker",
+        "record": "Cash was found in a locker accessible to three staff. One message from the accused asks a colleague to clear the shelf before audit.",
+        "decision": "Assess the link between the message and the alleged concealment."
+      },
+      {
+        "title": "Diverted medicines",
+        "record": "Shortages occurred during the accused's shift. A signed dispatch note records a transfer to another ward without a receipt.",
+        "decision": "Determine whether the record supports diversion by this accused."
+      },
+      {
+        "title": "Street identification",
+        "record": "A witness first described a taller person and later recognised the accused in a photo. A transit record places the accused near the scene.",
+        "decision": "Identify whether the evidentiary conflict needs trial or leaves the link missing."
+      },
+      {
+        "title": "Trust funds",
+        "record": "A trustee challenged a transfer in the minutes. A later authorisation bears their initials but lacks a date.",
+        "decision": "Assess what the documents can support about assent."
+      },
+      {
+        "title": "Counterfeit permit",
+        "record": "The applicant submitted a false permit and produced a receipt from a broker. A warning email went to a shared inbox.",
+        "decision": "Assess the material on knowledge without determining final guilt."
+      },
+      {
+        "title": "Unlawful gathering",
+        "record": "A video shows the accused arriving as damage ends. A witness describes giving directions earlier but does not identify the words.",
+        "decision": "Decide whether individual participation is supported."
+      },
+      {
+        "title": "Data export",
+        "record": "An access log identifies a workstation, not its user. The accused had booked it but the roster shows a colleague worked late.",
+        "decision": "Explain what connects the login to the person charged."
+      }
+    ],
+    "developments": [
+      "A document relied on as independent corroboration comes from the same source as the principal allegation.",
+      "The prosecution accepts that one time stamp is wrong and supplies a corrected sequence open to two interpretations.",
+      "The defence identifies an account consistent with the undisputed record but dependent on a witness whose credibility is contested.",
+      "The only reference said to identify the accused is an abbreviation shared with another person. Other circumstantial material remains.",
+      "A party invites the court to apply an inference drawn against a co-accused whose duties and access were materially different."
+    ],
+    "tasks": [
+      "Draft the threshold ruling, identifying the strongest link and the weakest necessary link.",
+      "State what remains for trial and what the court must actually decide at screening.",
+      "Explain why the rival account does or does not undermine the required individual link at this stage.",
+      "Address both sides on one inference that would turn this screening into a premature finding of guilt."
+    ],
+    "criteria": [
+      {
+        "name": "Individual nexus",
+        "zero": "Substitutes title, association or accusation for a link.",
+        "one": "Names evidence without tracing it to conduct and person.",
+        "two": "Connects specific material to the necessary conduct and explains any missing link."
+      },
+      {
+        "name": "Treatment of conflict",
+        "zero": "Ignores conflicting evidence or finally decides credibility.",
+        "one": "Mentions rival material without weighing its relevance at this stage.",
+        "two": "Explains what the conflict changes under the stipulated threshold and what remains for trial."
+      },
+      {
+        "name": "Operative reasoning",
+        "zero": "Copies the prosecution conclusion.",
+        "one": "Gives an outcome with generic threshold language.",
+        "two": "States the decision, the stage-specific reason and the unresolved issue."
+      }
+    ]
+  },
+  {
+    "id": "C04",
+    "title": "Legislator-advocate conflicts",
+    "construct": "In the exercise, elected status alone does not disqualify counsel. Investigate case-specific overlap and protect client representation and fair process.",
+    "cases": [
+      {
+        "title": "Road concession",
+        "record": "An MLA acting for a bidder voted for a roads budget and chaired a confidential hearing about this tender. The hearing transcript is sealed.",
+        "decision": "Determine what overlap matters for today's interim hearing."
+      },
+      {
+        "title": "School closure",
+        "record": "An MP represents parents and publicly criticised the policy. A minister says the MP privately received the school inspection notes.",
+        "decision": "Separate political speech from access to disputed evidence."
+      },
+      {
+        "title": "Compensation table",
+        "record": "An MLA acting for claimants signed a committee report annexing the table now challenged. The client relies on a later public version.",
+        "decision": "Decide whether the versions and counsel's earlier involvement create an evidentiary conflict."
+      },
+      {
+        "title": "Hospital audit",
+        "record": "Counsel questioned an auditor in committee and now appears for the hospital against that auditor's findings. A junior can argue on public material.",
+        "decision": "Manage the cross-examination and representation problem."
+      },
+      {
+        "title": "Land acquisition",
+        "record": "An MLA appeared as counsel before learning a constituent's complaint they forwarded is now an exhibit. The receipt bears counsel's annotations.",
+        "decision": "Assess possible witness status without imputing wrongdoing."
+      },
+      {
+        "title": "Election printing",
+        "record": "The MP advised a printer oversight group. The disputed correction log was never tabled; the opponent says the MP saw it privately.",
+        "decision": "Decide how to handle a contested claim of special access."
+      },
+      {
+        "title": "Flood procurement",
+        "record": "An MLA asked for supplier names on the House floor. The names are public but an unpublished pricing schedule is disputed.",
+        "decision": "Identify which information requires protection."
+      },
+      {
+        "title": "Energy tariff",
+        "record": "An elected advocate disclosed a client retainer after participating in a legislative hearing about the same tariff. The precise dates conflict.",
+        "decision": "Plan an impartial chronology inquiry."
+      },
+      {
+        "title": "Committee privilege",
+        "record": "Counsel's client relies on a document counsel says was received in open correspondence. An opponent says it was confidential committee evidence.",
+        "decision": "Decide how to test provenance without indiscriminate compelled disclosure."
+      },
+      {
+        "title": "Constituency grant",
+        "record": "An MLA appears against a trust whose grant the MLA recommended. The legal claim concerns accounts made after the recommendation.",
+        "decision": "Examine the temporal and substantive overlap before ruling."
+      }
+    ],
+    "developments": [
+      "Junior counsel is ready on the public record. A disputed confidential document would be essential only to one prayer.",
+      "A verified chronology shows the political role began after most disputed events but before one material review meeting.",
+      "A witness asserts personal contact with counsel on the disputed transaction and offers dated correspondence not yet disclosed to the client.",
+      "The opponent concedes that most allegedly privileged facts were already public. One source remains disputed.",
+      "Immediate exclusion would cause the client to miss an irreversible deadline. Opposing counsel offers a temporary standstill on defined terms."
+    ],
+    "tasks": [
+      "Issue directions for a conflict hearing that preserve privilege and both parties' opportunity to answer.",
+      "Decide whether today's hearing can proceed, with whom and on which material.",
+      "Explain the difference between an appearance concern, possible witness status and proved professional misconduct in this file.",
+      "Address an application for immediate exclusion and identify a proportionate alternative or why it fails."
+    ],
+    "criteria": [
+      {
+        "name": "Factual conflict",
+        "zero": "Treats office or party as decisive.",
+        "one": "Identifies an overlap without examining its materiality.",
+        "two": "Tests personal involvement, chronology and information relevant to this proceeding."
+      },
+      {
+        "name": "Fair process",
+        "zero": "Finds misconduct or orders blanket disclosure without hearing parties.",
+        "one": "Seeks disclosure without protecting legitimate confidences.",
+        "two": "Defines a narrow inquiry, gives an opportunity to answer and reserves contested disciplinary findings."
+      },
+      {
+        "name": "Client and adversary protection",
+        "zero": "Lets the deadline or exclusion decide the merits by default.",
+        "one": "Offers an accommodation without addressing the opposing risk.",
+        "two": "Orders a feasible interim arrangement and explains protection for both sides."
+      }
+    ]
+  },
+  {
+    "id": "C05",
+    "title": "Urgent listing and political influence",
+    "construct": "One contested hearing slot remains today. The next regular listing is tomorrow. Apply the same urgency criteria to each request.",
+    "cases": [
+      {
+        "title": "Rally and eviction",
+        "record": "A candidate challenges a loudspeaker condition before a rally; a family faces eviction at dawn. The family has a disputed stay receipt.",
+        "decision": "Select a hearing and address the other deadline."
+      },
+      {
+        "title": "Counting and medicines",
+        "record": "A candidate seeks preservation of counting footage due for overwrite. A clinic seeks access to medicines for tonight.",
+        "decision": "Determine which loss can be prevented without a full merits hearing."
+      },
+      {
+        "title": "Press event and custody",
+        "record": "A minister seeks relief over a publication before an evening press event. A legal-aid client remains in custody despite an apparent release order.",
+        "decision": "Compare timing, harm and available communication routes."
+      },
+      {
+        "title": "Ballot correction and wages",
+        "record": "The ballot locks tonight. Workers say a withdrawing contractor will remove the only payroll records overnight.",
+        "decision": "Identify which interest requires the contested slot."
+      },
+      {
+        "title": "Security detail and shelter",
+        "record": "An elected member challenges withdrawal of escorts citing a threat letter. A shelter faces closure before a storm.",
+        "decision": "Decide what verification permits safe triage today."
+      },
+      {
+        "title": "Campaign sign and examinations",
+        "record": "A party seeks restoration of signs before voting; students need admission cards before morning exams. Both respondents contest entitlement.",
+        "decision": "Rank requests and consider interim access for the deferred applicant."
+      },
+      {
+        "title": "Broadcast and dialysis",
+        "record": "A public debate excludes a candidate. A patient faces a cancelled early-morning dialysis slot after a reimbursement dispute.",
+        "decision": "Assess irreversibility and alternatives for each applicant."
+      },
+      {
+        "title": "Nomination and crop seizure",
+        "record": "A contested nomination closes today. A grower says seized produce will perish before the next hearing.",
+        "decision": "Design an order that addresses practical loss in both files."
+      },
+      {
+        "title": "Committee disclosure and wages",
+        "record": "An MP seeks an unredacted report before a vote. A worker asks to freeze a transfer allegedly designed to defeat an existing award.",
+        "decision": "Assess available partial disclosures and preservation steps."
+      },
+      {
+        "title": "Audit publication and demolition",
+        "record": "A party seeks an urgent answer to an audit report before polling. A municipality says an unstable structure must be demolished at first light despite an occupant's challenge.",
+        "decision": "Determine what evidence is needed immediately in both cases."
+      }
+    ],
+    "developments": [
+      "The respondent in the first matter offers an enforceable standstill until noon tomorrow, limited to the identified applicant.",
+      "An independent record contradicts the second applicant's stated deadline, although the substantive harm remains disputed.",
+      "The respondent in the second matter cannot take an irreversible step without a second official's signature, and the official is available now.",
+      "A new exhibit materially strengthens the first applicant's urgency claim. The other side needs ten minutes to authenticate it.",
+      "Both applicants identify interim measures. Only one has the necessary affected party present to agree binding terms."
+    ],
+    "tasks": [
+      "Give both registry entries with times, responsibilities and the basis for any temporary protection.",
+      "Explain to the deferred applicant exactly what could bring the matter back before the deadline.",
+      "Identify the fact most likely to reverse the ranking and give a provisional allocation on the present record.",
+      "Decide whether to use the slot for contested relief or obtain limited undertakings and explain the consequences for each applicant."
+    ],
+    "criteria": [
+      {
+        "name": "Comparable harm",
+        "zero": "Prioritises office, wealth or popularity by itself.",
+        "one": "Lists deadlines without comparing reversibility.",
+        "two": "Uses one urgency test and compares deadline, severity and available protection in both matters."
+      },
+      {
+        "name": "Usable protection",
+        "zero": "Defers a case without addressing irreversible harm.",
+        "one": "Suggests an undertaking without verifying authority or scope.",
+        "two": "Defines feasible protection or explains its absence, identifying who is bound and until when."
+      },
+      {
+        "name": "Reviewable allocation",
+        "zero": "Promises time the court does not have.",
+        "one": "Chooses a slot with general reasons.",
+        "two": "Produces a feasible clock, records the decisive fact and provides a return route."
+      }
+    ]
+  },
+  {
+    "id": "C06",
+    "title": "Public interest litigation and abusive process",
+    "construct": "Screen public injury, standing, evidence and proportionality without allowing motive alone to resolve disputed facts.",
+    "cases": [
+      {
+        "title": "River sampling",
+        "record": "A rival contractor challenges pollution using lab results from a competitor's outfall. Chain of custody covers only one sample.",
+        "decision": "Decide which allegations warrant verification."
+      },
+      {
+        "title": "Clinic closures",
+        "record": "An opposition organiser cites six clinic closures. District records show two reopened; attendance logs for the other four are missing.",
+        "decision": "Choose the scope of any public inquiry."
+      },
+      {
+        "title": "Unsafe hostels",
+        "record": "A student organisation files anonymous photographs of blocked exits. Building plans identify two corridors but not the date of the images.",
+        "decision": "Decide how to verify a safety risk without exposing residents."
+      },
+      {
+        "title": "Land tender",
+        "record": "A losing bidder claims public loss from an auction and omits an earlier commercial challenge. A valuation discrepancy is documented.",
+        "decision": "Separate private redress from a credible public issue."
+      },
+      {
+        "title": "Voting access",
+        "record": "A volunteer alleges polling booths are inaccessible using photos from earlier elections. Current access maps disagree about three locations.",
+        "decision": "Specify fast verification ahead of polling."
+      },
+      {
+        "title": "Drinking water",
+        "record": "A campaigning councillor challenges supply contamination. An accredited test supports one neighbourhood but not the entire district claimed.",
+        "decision": "Decide what relief the geographic evidence supports."
+      },
+      {
+        "title": "Shelter roll",
+        "record": "An NGO alleges ghost residents and seeks publication of names. Receipts suggest a duplicate claim; residents fear identification.",
+        "decision": "Review the evidence without creating new exposure."
+      },
+      {
+        "title": "School meals",
+        "record": "A political rival alleges ration diversion using purchase orders but no distribution records. Parents offer direct testimony.",
+        "decision": "Identify what should be heard before ordering a general audit."
+      },
+      {
+        "title": "Street lighting",
+        "record": "A former supplier alleges inflated billing in every ward. Meter logs support a discrepancy in one ward and fail to cover three others.",
+        "decision": "Decide whether the inquiry should extend citywide."
+      },
+      {
+        "title": "Prison letters",
+        "record": "A media campaign reproduces unsigned letters alleging denial of medical visits. One dated referral is independently corroborated.",
+        "decision": "Order an appropriate preliminary response without deciding systemic guilt."
+      }
+    ],
+    "developments": [
+      "The petitioner discloses an undisclosed financial backer with a direct interest. One independent source still supports a public injury.",
+      "A district authority offers raw records to the court but insists affected people must remain unidentified.",
+      "A separate proceeding concerns the same project but seeks only personal compensation.",
+      "A named source retracts one assertion under circumstances that remain uncertain. Documentary material supports a narrower claim.",
+      "The government concedes the reported anomaly in one location and submits an action plan with no completion date."
+    ],
+    "tasks": [
+      "Give a threshold decision on the scope of the case and what must be verified before escalation.",
+      "Decide whether a change of petitioner, independent assistance or dismissal would serve affected people on this record.",
+      "Dictate a proportionate interim inquiry with responsible parties and confidentiality arrangements.",
+      "Respond to an application for costs alleging political abuse while preserving any independently substantiated issue."
+    ],
+    "criteria": [
+      {
+        "name": "Interest and standing",
+        "zero": "Treats political motive as proof of abuse or innocence.",
+        "one": "Notes the interest without relating it to the claim.",
+        "two": "Separates private incentives from independently supported public injury."
+      },
+      {
+        "name": "Evidence and scope",
+        "zero": "Orders a roving inquiry or rejects all material unread.",
+        "one": "Names evidence but leaves scope undefined.",
+        "two": "Matches scrutiny and provisional findings to verified material and conflicting accounts."
+      },
+      {
+        "name": "Proportionate procedure",
+        "zero": "Punishes or grants broad relief without a hearing.",
+        "one": "Proposes scrutiny without a bounded mechanism.",
+        "two": "Chooses a defined procedure, protects affected people and gives reasons and review conditions."
+      }
+    ]
+  },
+  {
+    "id": "C07",
+    "title": "Poverty, custody and meaningful bail",
+    "construct": "A release order exists but the applicant remains in custody. Test whether the condition blocking release serves a demonstrated risk and whether a workable substitute exists.",
+    "cases": [
+      {
+        "title": "Local surety",
+        "record": "A migrant worker cannot find a local property owner. A prior missed hearing occurred after notice went to a previous address.",
+        "decision": "Address attendance without imposing an impossible condition."
+      },
+      {
+        "title": "Cash deposit",
+        "record": "A domestic worker cannot pay the deposit. The prosecutor points to travel to another district for work and one voluntary return.",
+        "decision": "Assess the actual flight risk and practicable assurance."
+      },
+      {
+        "title": "Digital reporting",
+        "record": "A person cannot register weekly through a smartphone application from a village without coverage. A nearby police post keeps a paper register.",
+        "decision": "Decide whether alternative reporting meets the purpose."
+      },
+      {
+        "title": "Address proof",
+        "record": "A pavement resident has no utility bill. A shelter will confirm contact but cannot guarantee long-term accommodation.",
+        "decision": "Design a means of contact without assuming a permanent address."
+      },
+      {
+        "title": "Language barrier",
+        "record": "The release order requires an undertaking in a language the accused cannot read. The registry says a signature alone suffices.",
+        "decision": "Secure informed compliance and identify remaining release obstacles."
+      },
+      {
+        "title": "Verification delay",
+        "record": "A surety is willing but title verification has taken six weeks. An official says a government database mismatch caused delay.",
+        "decision": "Decide whether alternative verification permits earlier release."
+      },
+      {
+        "title": "Work hours",
+        "record": "Daily daytime reporting would cost a factory worker their job. The prosecutor raises one documented attempt to contact a witness.",
+        "decision": "Separate attendance conditions from witness protection."
+      },
+      {
+        "title": "Travel restriction",
+        "record": "An arrested caregiver must cross the district border for treatment. A past address change was unreported during a hospital stay.",
+        "decision": "Balance contactability and access to care."
+      },
+      {
+        "title": "Multiple orders",
+        "record": "Bail has been granted in two cases with inconsistent reporting locations. Neither court was told of the other condition.",
+        "decision": "Identify which body can change which obligation and how release can occur."
+      },
+      {
+        "title": "Transport cost",
+        "record": "A weekly long-distance appearance costs more than a day’s earnings. A prior failure coincided with cancelled transport but no receipt survives.",
+        "decision": "Test the reliability of the attendance concern and a lower-cost plan."
+      }
+    ],
+    "developments": [
+      "An independent contact offers verifiable notice delivery but refuses to assume an unlimited financial obligation.",
+      "The prosecution discloses a documented past breach. The applicant offers a specific explanation supported only in part.",
+      "Jail staff confirm that changing the disputed condition alone would still leave a separate administrative hold requiring verification.",
+      "An available local official can monitor a narrower condition and report noncompliance within one working day.",
+      "A proposed substitute would shift a substantial recurring expense onto an equally poor relative."
+    ],
+    "tasks": [
+      "Give a reasoned disposition and a release communication plan naming the person who verifies execution.",
+      "Explain which risk the original condition served and whether the proposed substitute addresses that risk.",
+      "Describe the immediate inquiry and a fallback if the first substitute proves infeasible today.",
+      "Address the prosecutor's strongest objection and the cost to the applicant of maintaining the present condition."
+    ],
+    "criteria": [
+      {
+        "name": "Individual risk",
+        "zero": "Treats poverty as flight risk or ignores a documented concern.",
+        "one": "Names a risk without testing its factual basis.",
+        "two": "Distinguishes financial inability, notice failure and demonstrated noncompliance on the record."
+      },
+      {
+        "name": "Feasible conditions",
+        "zero": "Repeats the barrier or assumes another person can pay.",
+        "one": "Suggests an alternative without checking its practical operation.",
+        "two": "Chooses a legally available, workable option or gives reasons for retaining a condition in light of alternatives."
+      },
+      {
+        "name": "Actual release",
+        "zero": "Assumes a paper order ensures release.",
+        "one": "Directs communication without follow-up.",
+        "two": "Identifies the recipient, verification time and a response to continued detention or another hold."
+      }
+    ]
+  },
+  {
+    "id": "C08",
+    "title": "Judicial insults and repair",
+    "construct": "You made an inaccurate personal remark in open court. Repair the hearing, the record and the practical harm under the stated circumstances.",
+    "cases": [
+      {
+        "title": "Repeat filing",
+        "record": "You called the applicant a professional nuisance and dismissed a supposed duplicate. The new application challenges a later notice.",
+        "decision": "Repair both the remark and the lost hearing."
+      },
+      {
+        "title": "Missing translation",
+        "record": "You mocked a witness for changing an answer. An interpreter reports the first question was mistranslated and the witness is now silent.",
+        "decision": "Preserve reliable evidence and restore an opportunity to answer."
+      },
+      {
+        "title": "Legal-aid papers",
+        "record": "You described legal-aid counsel as unprepared. The registry confirms it served an incomplete brief and costs are under consideration.",
+        "decision": "Correct the attribution and decide how to hear the client fairly."
+      },
+      {
+        "title": "Medical absence",
+        "record": "You likened a litigant's illness explanation to theatre. Hospital records confirm admission but do not establish the entire absence claimed.",
+        "decision": "Withdraw the insult while addressing the remaining procedural issue."
+      },
+      {
+        "title": "Remote disconnection",
+        "record": "You accused a remote applicant of staging a dropout. The court log shows a server outage, although other delays remain unexplained.",
+        "decision": "Restore participation and decide what can proceed today."
+      },
+      {
+        "title": "Bank account mismatch",
+        "record": "You called the applicant a fraudster because two account names differ. An identity update explains the spelling but one transfer is disputed.",
+        "decision": "Separate correction from unresolved merits."
+      },
+      {
+        "title": "Witness expense",
+        "record": "You called a witness greedy for seeking travel costs. The summons required attendance from another district, and the applicable rate is disputed.",
+        "decision": "Correct the remark and make a fair expense decision."
+      },
+      {
+        "title": "Clothing remark",
+        "record": "You mocked how a self-represented litigant was dressed. The other side then described the litigant as unreliable. Their documents remain disputed.",
+        "decision": "Repair the evidentiary and interpersonal effect of your words."
+      },
+      {
+        "title": "Injury evidence",
+        "record": "You ridiculed a photograph as staged. The original has independent metadata but the cause of injury remains contested.",
+        "decision": "Reopen the factual issue without prejudging it in the opposite direction."
+      },
+      {
+        "title": "Clerical mix-up",
+        "record": "You publicly reprimanded a junior lawyer for an altered exhibit. The registry now identifies its own scanning error. The opposing party relied on the incorrect copy.",
+        "decision": "Correct the record and protect both parties' hearing rights."
+      }
+    ],
+    "developments": [
+      "The affected person asks to give their response in writing and declines a direct apology meeting.",
+      "A public report accurately quotes your remark. The affected person wants the correction to be equally accessible.",
+      "The party asks for reassignment. Another bench can hear the matter today if the file is transferred promptly.",
+      "One party proposes erasing the original exchange from the public record; the affected person asks for an appended correction.",
+      "A time-sensitive interim loss will occur while the remark is being addressed. The opponent offers a brief standstill if its terms are recorded."
+    ],
+    "tasks": [
+      "Speak the next four sentences in open court and specify the procedural direction that follows.",
+      "Draft the correction and distinguish the finding that must be withdrawn from any still-open merits issue.",
+      "Decide whether to continue the hearing, pause or seek reassignment, accounting for the practical deadline.",
+      "Explain to the affected person how they can be heard and how they will know the corrected decision reached the proper recipients."
+    ],
+    "criteria": [
+      {
+        "name": "Personal accountability",
+        "zero": "Defends the insult or blames the recipient.",
+        "one": "Expresses general regret without correcting the material error.",
+        "two": "Identifies and withdraws the exact wrong, addresses the person and corrects the relevant record."
+      },
+      {
+        "name": "Effective hearing",
+        "zero": "Demands forgiveness or treats silence as assent.",
+        "one": "Offers a hearing without making it usable.",
+        "two": "Restores a meaningful response channel and resolves the procedural consequence without conditioning it on forgiveness."
+      },
+      {
+        "name": "Independent merits",
+        "zero": "Uses a favourable outcome as a substitute for repair or leaves the prejudice intact.",
+        "one": "Notes a remaining issue without a fair plan.",
+        "two": "Separates corrected facts from contested issues and specifies a fair decision-maker or next hearing step."
+      }
+    ]
+  },
+  {
+    "id": "C09",
+    "title": "Court reporting, confidentiality and open justice",
+    "construct": "Address a requested restriction on reporting of an open hearing. Consider reliable attribution, concrete harm and less restrictive measures.",
+    "cases": [
+      {
+        "title": "Oral observation",
+        "record": "A headline treats a judge's question as a finding. The article body correctly describes the exchange. Counsel seeks a reporting ban.",
+        "decision": "Identify the precise error and proportionate response."
+      },
+      {
+        "title": "Quoted affidavit",
+        "record": "A clip shows the judge repeating an accusation from an affidavit. Its introduction was removed. A party demands contempt action.",
+        "decision": "Verify attribution and the effect of editing."
+      },
+      {
+        "title": "Protected identity",
+        "record": "An accurate article indirectly identifies a protected participant through employer and village. Counsel seeks removal of the full article.",
+        "decision": "Define the information that creates the risk and possible redaction."
+      },
+      {
+        "title": "Embargo confusion",
+        "record": "A reporter published a draft order circulated by mistake. The signed version changes one operative paragraph.",
+        "decision": "Correct the public account and consider any justified restriction."
+      },
+      {
+        "title": "Court sketch",
+        "record": "A sketch identifies a disputed witness in an otherwise open hearing. The witness reports threats but provides no verified source.",
+        "decision": "Evaluate risk without assuming every depiction is harmful."
+      },
+      {
+        "title": "Medical exhibit",
+        "record": "A broadcast describes an intimate diagnosis visible briefly on a public screen. Its relevance to the dispute is limited.",
+        "decision": "Decide whether access arrangements or reporting limits are justified."
+      },
+      {
+        "title": "Misleading translation",
+        "record": "Two translations of an oral direction differ on whether payment was mandatory. The signed order uses different language again.",
+        "decision": "Clarify the operative position before considering sanctions."
+      },
+      {
+        "title": "Remote participant",
+        "record": "A livestream reveals an address on a document held to camera. Counsel seeks to close all further hearings.",
+        "decision": "Address the exposed detail and prevent recurrence."
+      },
+      {
+        "title": "Source attribution",
+        "record": "A report quotes opposing counsel but a social post attributes the words to the judge. The publisher offers a correction.",
+        "decision": "Determine who can correct which account and what the court should record."
+      },
+      {
+        "title": "Parallel proceedings",
+        "record": "A party alleges that reporting a preliminary statement will influence another hearing. The report accurately identifies the procedural stage.",
+        "decision": "Examine the specific risk and available narrower safeguards."
+      }
+    ],
+    "developments": [
+      "The reporter offers a prompt, prominently placed clarification without altering accurate underlying material.",
+      "An affected nonparty identifies a specific safety risk and seeks confidential verification before any public ruling.",
+      "The full authorised recording resolves attribution of the words but does not resolve whether publication caused the alleged harm.",
+      "A blanket restriction would also cover an unrelated public-interest issue due to be heard tomorrow.",
+      "A narrower time-limited order could protect one identifiable detail. Existing copies are already circulating elsewhere."
+    ],
+    "tasks": [
+      "Draft the proposed disposition including subject matter, duration, affected parties and opportunity for review where relevant.",
+      "Give an immediate verification plan and say what, if anything, can be done pending verification.",
+      "Explain the difference between correcting the record and restricting another person's reporting on these facts.",
+      "Respond to the strongest case for a blanket restraint and test a specific narrower measure."
+    ],
+    "criteria": [
+      {
+        "name": "Verification",
+        "zero": "Sanctions or restricts on a cropped or disputed account alone.",
+        "one": "Mentions verification without specifying the record or affected parties.",
+        "two": "Checks the authoritative record, attribution and actual risk with an opportunity to answer."
+      },
+      {
+        "name": "Open justice and harm",
+        "zero": "Treats embarrassment or public curiosity as decisive.",
+        "one": "Mentions competing interests generically.",
+        "two": "Weighs the specific injury and the speech or access displaced by the proposed order."
+      },
+      {
+        "name": "Narrow remedy",
+        "zero": "Imposes an indefinite blanket restraint or ignores a concrete risk.",
+        "one": "Suggests a narrower measure without scope or review.",
+        "two": "Defines an effective proportionate step and explains its limits, duration and review."
+      }
+    ]
+  },
+  {
+    "id": "C10",
+    "title": "Faith, adult autonomy and alleged restraint",
+    "construct": "An adult’s voluntary choices and present freedom are contested. The exercise gives the court authority to examine alleged restraint, with any investigation of past wrongdoing handled separately.",
+    "cases": [
+      {
+        "title": "Study centre",
+        "record": "An adult chose to study at a centre but privately asked a friend for an exit key. The centre says it keeps keys for safety.",
+        "decision": "Examine present ability to leave and the person’s chosen destination."
+      },
+      {
+        "title": "Family supervision",
+        "record": "Parents say their adult child consented to remain at home after changing faith. The adult answers only in a relative's presence.",
+        "decision": "Create a reliable opportunity to speak freely."
+      },
+      {
+        "title": "Marriage dispute",
+        "record": "An adult says the marriage was chosen freely. A spouse holds the passport and says it was handed over for safekeeping.",
+        "decision": "Separate choice of partner from access to identity documents."
+      },
+      {
+        "title": "Ritual retreat",
+        "record": "An adult entered a silent retreat willingly. A request to leave is disputed because a written quiet-period agreement was signed.",
+        "decision": "Determine present consent without judging the belief."
+      },
+      {
+        "title": "Housing dependency",
+        "record": "A family withdrew housing after an adult chose another faith. A host offers shelter only if the adult signs a belief statement.",
+        "decision": "Distinguish absence of safe options from freely chosen accommodation."
+      },
+      {
+        "title": "Interpretation conflict",
+        "record": "An interpreter supplied by a spiritual group renders the adult's answer as consent. An independent listener says the original was ambiguous.",
+        "decision": "Decide how to verify the person's own words."
+      },
+      {
+        "title": "Telephone control",
+        "record": "An adult's earlier texts describe a chosen course of study. Current calls are answered by a relative who says the phone is broken.",
+        "decision": "Plan a safe direct conversation and address access to communication."
+      },
+      {
+        "title": "Police protection",
+        "record": "An adult requests protection from family threats but refuses an escorted return home. An officer says supervision is the safest solution.",
+        "decision": "Consider protection without imposing custody."
+      },
+      {
+        "title": "Public disclosure",
+        "record": "An adult asks to withhold their address after leaving a community. A parent claims knowing the location is essential to verify safety.",
+        "decision": "Balance verification and confidentiality on the actual evidence."
+      },
+      {
+        "title": "Competing messages",
+        "record": "Two voice notes give different accounts of an adult's wishes. One was recorded with relatives nearby; timestamps are disputed.",
+        "decision": "Establish present wishes independently and separate historic allegations."
+      }
+    ],
+    "developments": [
+      "In private, the adult distinguishes an earlier voluntary decision from a changed present choice and asks for a different immediate arrangement.",
+      "The adult accepts help from an independent support person but declines contact with both groups appearing in court.",
+      "A disputed recording shows a possible threat last week. Its production increases concern about disclosing the adult's present location.",
+      "The proposed safe destination proves unavailable tonight. A neutral temporary option is offered, subject to the adult's consent.",
+      "An interested relative offers transport while demanding continuous location tracking. The adult objects to that condition."
+    ],
+    "tasks": [
+      "Give the next hearing directions and explain how the adult can accept, decline or change the immediate plan.",
+      "Draft an operative order dealing separately with liberty today, privacy and any historic allegation.",
+      "State what evidence changes your assessment and identify one unresolved fact that does not justify delaying a voluntary departure.",
+      "Explain the limits of the court's authority to the competing parties and give an immediately workable protection plan."
+    ],
+    "criteria": [
+      {
+        "name": "Independent voice",
+        "zero": "Accepts interested accounts as conclusive.",
+        "one": "Asks for wishes without ensuring private, accessible communication.",
+        "two": "Obtains and weighs an independent account, distinguishing prior from current consent."
+      },
+      {
+        "name": "Jurisdiction and evidence",
+        "zero": "Chooses the person's faith, relationship or custodian without authority.",
+        "one": "Recognises autonomy but lets historic uncertainty control present liberty.",
+        "two": "Separates present restraint and protection from contested history and personal religious judgments."
+      },
+      {
+        "name": "Effective choice",
+        "zero": "Orders compulsory supervision or discloses a location without addressing risk.",
+        "one": "Offers generic protection without checking consent or feasibility.",
+        "two": "Sets out a consensual, practical arrangement including the responsible person and proportionate privacy safeguards."
+      }
+    ]
+  }
+]

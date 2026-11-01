@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Judicial practice lab</title>
+<style>
+:root{--ink:#192c30;--muted:#496168;--line:#becdca;--green:#12544e;--paper:#fffdf8;--tint:#eaf3ed}
+*{box-sizing:border-box}body{margin:0;background:#f4f3ed;color:var(--ink);font:1rem/1.55 system-ui,sans-serif}header,main,footer{max-width:84rem;margin:auto;padding:1.2rem clamp(1rem,4vw,4rem)}header{display:flex;align-items:center;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line)}header strong,.eyebrow{font-size:.78rem;letter-spacing:.085em;text-transform:uppercase;color:var(--green);font-weight:750}main{padding-top:2rem}h1,h2,h3,p{margin:0 0 .75rem}h1,h2{font-family:Georgia,serif;line-height:1.12;font-weight:500}h1{font-size:clamp(2.4rem,5vw,4.1rem)}h2{font-size:clamp(1.8rem,3vw,2.7rem)}h3{font-size:1.12rem}p,li,blockquote,label{overflow-wrap:anywhere}button,textarea,select{font:inherit}button,select,textarea{border:1px solid var(--line);border-radius:.5rem;color:var(--ink)}button{cursor:pointer;background:white;padding:.55rem .9rem;font-weight:650}button.primary{background:var(--green);border-color:var(--green);color:white}button:hover{filter:brightness(.95)}button:disabled{cursor:default;opacity:.65}:focus-visible{outline:3px solid #b45919;outline-offset:2px}.layout{display:grid;grid-template-columns:minmax(12rem,18rem) minmax(0,1fr);gap:1.4rem;align-items:start;margin-top:1.2rem}aside,article{background:var(--paper);border:1px solid var(--line);border-radius:.85rem;padding:clamp(1rem,2.5vw,2rem)}aside{padding:1rem}nav{display:grid;gap:.4rem;max-height:60vh;overflow:auto}nav button{text-align:left;font-size:.88rem}nav button[aria-current=true]{background:var(--tint);border-color:var(--green)}textarea{width:100%;min-height:8rem;padding:.7rem;resize:vertical;background:white}label{display:block;font-weight:650;margin:.6rem 0 .25rem}section{border-top:1px solid var(--line);margin-top:1.35rem;padding-top:1.15rem}.hint,footer{color:var(--muted);font-size:.9rem}.badge{background:var(--tint);color:var(--green);padding:.23rem .5rem;border-radius:.35rem;font-size:.8rem}.item{border-left:3px solid var(--line);padding-left:.8rem;margin:1rem 0}.actions{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem;margin:.6rem 0}.item textarea{min-height:3.5rem}select{padding:.4rem;background:white}blockquote{margin:.35rem 0;color:var(--muted)}progress{width:100%;accent-color:var(--green)}[hidden]{display:none!important}.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:white;padding:.5rem}#status:empty{display:none}#status{color:var(--green);padding:.5rem 0}footer{border-top:1px solid var(--line);margin-top:1rem}@media(max-width:720px){.layout{grid-template-columns:1fr}nav{max-height:10rem}}
+</style>
+</head>
+<body>
+<a class="skip" href="#workspace">Skip to exercise</a>
+<header><a href="/studio">← Decision studio</a><strong>Short exercises</strong><button id="export" disabled>Export practice record</button></header>
+<main>
+<div class="eyebrow">Scenario workshop</div><h1>Judicial practice lab</h1>
+<p>Use these short exercises for rehearsal. For a blind decision, a late change of facts and assessor review, open the Decision Studio.</p>
+<p class="hint">Use fictional facts only. Responses stay in this tab’s memory until exported. Use the randomised assessment to record answers for a frontier review. Refreshing closes this session.</p>
+<p class="hint"><a href="/evaluation">Read the live scoring audit</a> before interpreting model ratings. The warm-ups are now for human discussion.</p><p role="status" id="status"></p>
+<div class="layout">
+<aside><h3>Exercise library</h3><div id="progressText">Loading exercises…</div><progress id="progress" max="1" value="0" aria-label="Exercises with completed human reviews"></progress><nav id="library" aria-label="Select exercise"></nav></aside>
+<article id="workspace" tabindex="-1" aria-label="Practice workspace"><p>Loading exercise…</p></article>
+</div>
+</main>
+<footer>Developmental practice only. Scores do not establish clinical fitness or suitability for appointment, promotion or discipline.</footer>
+<script>
+'use strict';
+const el=id=>document.getElementById(id);
+const bank=[], records=new Map();
+let selected=null;
+function node(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n}
+function announce(message){el('status').textContent=message}
+function complete(r){return !!r.answer.trim()&&r.review.every(x=>x.score!==''&&x.rationale.trim())}
+function list(){
+ const done=[...records.values()].filter(complete).length;
+ el('progressText').textContent=done+' of '+bank.length+' human reviews complete';
+ el('progress').max=bank.length||1;el('progress').value=done;
+ const buttons=el('library').children;
+ bank.forEach((s,i)=>{const b=buttons[i];b.textContent=(i+1)+'. '+s.title+(complete(records.get(s.id))?' ✓':'');b.setAttribute('aria-current',String(selected===s.id))});
+}
+function fresh(s){return {answer:'',ai:null,review:s.criteria.map(()=>({score:'',rationale:''})),pending:false,error:''}}
+function workspace(s){
+ selected=s.id;list();
+ const r=records.get(s.id), w=el('workspace');w.replaceChildren();
+ w.append(node('span',s.domain,'badge'),node('h2',s.title),node('p',s.prompt));
+ const guide=node('a','Research and assessor guide');guide.href='/guide';guide.target='_blank';guide.rel='noopener';w.append(guide);const rubric=node('details');rubric.append(node('summary','Read the assessment criteria'));const ol=node('ol');s.criteria.forEach(c=>ol.append(node('li',c)));rubric.append(ol);w.append(rubric);
+ const practice=node('section');const label=node('label','Your response');label.htmlFor='response';
+ const answer=node('textarea');answer.id='response';answer.maxLength=10000;answer.value=r.answer;answer.placeholder='Explain what you would say or do, and why.';
+ const reset=node('button','Revise response');reset.type='button';
+ const locked=()=>r.review.some(x=>x.score!==''||x.rationale.trim());
+ answer.readOnly=!!locked();reset.hidden=!locked();
+ reset.onclick=()=>{if(!confirm('Clear the human ratings and revise this response?'))return;const next=fresh(s);next.answer=r.answer;records.set(s.id,next);workspace(s);el('response').focus()};
+ answer.oninput=()=>{r.answer=answer.value;list()};
+ practice.append(label,answer,reset);w.append(practice);
+ const review=node('section');review.append(node('h3','Independent human review'),node('p','Select a rating and explain the evidence for each criterion. Cite the operative directions and any conflicting language.','hint'));
+ s.criteria.forEach((c,i)=>{const item=node('div',undefined,'item'), rating=r.review[i],sel=node('select'),why=node('textarea'),l=node('label',c),rl=node('label','Evidence and rationale');sel.id='rating-'+i;l.htmlFor=sel.id;why.id='reason-'+i;rl.htmlFor=why.id;why.value=rating.rationale;
+ [['','Choose a rating'],['0','0 · Not demonstrated'],['1','1 · Partly demonstrated'],['2','2 · Demonstrated']].forEach(([v,t])=>{const opt=node('option',t);opt.value=v;sel.append(opt)});sel.value=rating.score;
+ function edit(){rating.score=sel.value;rating.rationale=why.value;answer.readOnly=!!locked()||r.pending;reset.hidden=!locked()||r.pending;list()}
+ function requireAnswer(e){if(!answer.value.trim()){e.preventDefault();announce('Write a response before reviewing it.');answer.focus();return false}return true}
+ sel.onchange=e=>{if(!requireAnswer(e)){sel.value=rating.score;return}edit()};
+ why.oninput=e=>{if(!requireAnswer(e)){why.value=rating.rationale;return}edit()};
+ item.append(l,sel,rl,why);review.append(item)});
+ w.append(review);
+}
+el('export').onclick=()=>{const output={formatVersion:1,exportedAt:new Date().toISOString(),purpose:'Judicial development practice',exercises:bank.map(s=>{const r=records.get(s.id);return {id:s.id,title:s.title,domain:s.domain,prompt:s.prompt,criteria:s.criteria,answer:r.answer,ai:r.ai,humanReview:r.review.map(x=>({score:x.score===''?null:Number(x.score),rationale:x.rationale})),humanReviewComplete:complete(r)}})};
+ const url=URL.createObjectURL(new Blob([JSON.stringify(output,null,2)],{type:'application/json'}));const a=node('a');a.href=url;a.download='judicial-practice-record.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);announce('Practice record exported as JSON.')};
+(async()=>{try{const response=await fetch('/api/bank');if(!response.ok)throw Error('Exercise library unavailable.');const data=await response.json();if(!Array.isArray(data)||!data.length)throw Error('No exercises available.');for(const s of data){if(!Array.isArray(s.criteria)||!s.criteria.length)throw Error('Invalid assessment criteria.');bank.push(s);records.set(s.id,fresh(s));const b=node('button');b.onclick=()=>{workspace(s);announce('');el('workspace').focus()};el('library').append(b)}workspace(bank[0]);el('export').disabled=false}catch(e){announce(e.message);el('progressText').textContent='Library unavailable';el('workspace').textContent='Reload the page after the practice server is available.'}})();
+</script>
+</body>
+</html>

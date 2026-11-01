@@ -1,0 +1,7 @@
+.DS_Store
+secret/
+keys.md
+secret keys.md
+.env
+.env.*
+!.env.example

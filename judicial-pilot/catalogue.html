@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Question catalogue · Judicial Practice Lab</title>
+<style>
+:root{font:16px/1.6 system-ui,sans-serif;color:#1b332e;background:#f6f5ef}body{max-width:66rem;margin:auto;padding:2rem clamp(1rem,4vw,3rem)}nav{display:flex;justify-content:space-between;gap:.8rem;flex-wrap:wrap}h1,h2{font-family:Georgia,serif;line-height:1.1}h1{font-size:clamp(2rem,6vw,3.6rem);margin-bottom:.5rem}select,input,button{font:inherit;border:1px solid #738a80;border-radius:.4rem;background:#fff;padding:.4rem .6rem;max-width:100%;color:inherit}button{cursor:pointer}a{color:#17584b}label{display:block;font-weight:600;margin-top:.8rem}section{margin:1.3rem 0;padding:1.3rem;background:#fffdf7;border:1px solid #c7d2c9;border-radius:.6rem}summary{cursor:pointer;font-weight:650}details{padding:.7rem 0;border-top:1px solid #d6dfd7}details p{margin:.5rem 0}small{color:#40574e}.pager{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+</style>
+<nav><a href="/">← Randomised assessment</a><a href="/api/bank-export" download="judicial-question-bank.json">Download all questions (JSON)</a></nav>
+<h1>Question catalogue</h1><p id="intro" role="status">Loading bank…</p>
+<p>Each category contains ten case records. Each record has five possible developments and four distinct tasks. Open a question to inspect exactly what the participant receives.</p>
+<label for="category">Category</label><select id="category"></select><p id="construct"></p>
+<label for="query">Find an exhibit, issue or question ID within this category</label><input id="query" type="search">
+<section><h2>Questions</h2><p id="status" aria-live="polite"></p><div id="items"></div></section>
+<div class="pager"><button id="prev">Previous 20</button><button id="next">Next 20</button></div>
+<script>
+'use strict';
+const el=id=>document.getElementById(id);
+const make=(tag,text)=>{const n=document.createElement(tag);n.textContent=text;return n};
+let categories=[],rows=[],page=0,request=0;
+function draw(){
+ const query=el('query').value.trim().toLowerCase();
+ const matches=rows.filter(q=>Object.values(q).join(' ').toLowerCase().includes(query));
+ const start=page*20;
+ el('status').textContent=matches.length?'Showing '+(start+1)+'–'+Math.min(start+20,matches.length)+' of '+matches.length:'No matching questions.';
+ el('prev').disabled=!page;el('next').disabled=start+20>=matches.length;el('items').replaceChildren();
+ for(const q of matches.slice(start,start+20)){
+  const d=document.createElement('details');d.append(make('summary',q.id+' · '+q.title));
+  for(const [title,key] of [['Record','record'],['Decision','decision'],['Development','development'],['Task','task']]){
+   d.append(make('strong',title),make('p',q[key]));
+  }
+  el('items').append(d);
+ }
+}
+async function choose(){
+ const current=++request,id=el('category').value;page=0;rows=[];el('query').value='';draw();
+ el('status').textContent='Loading category…';el('construct').textContent=categories.find(c=>c.id===id).construct;
+ try{const res=await fetch('/api/categories/'+id);if(!res.ok)throw Error();const result=await res.json();if(current===request){rows=result;draw()}}
+ catch{if(current===request)el('status').textContent='Unable to load. Select a category to retry.'}
+}
+el('category').onchange=choose;el('query').oninput=()=>{page=0;draw()};el('prev').onclick=()=>{page--;draw()};el('next').onclick=()=>{page++;draw()};
+(async()=>{try{const res=await fetch('/api/catalogue');if(!res.ok)throw Error();const bank=await res.json();categories=bank.categories;
+el('intro').textContent=bank.total.toLocaleString()+' question variants · '+categories.length+' categories · Bank '+bank.version;
+for(const c of categories){const option=make('option',c.id+' · '+c.title+' ('+c.count+')');option.value=c.id;el('category').append(option)}await choose()}catch{el('intro').textContent='Question bank unavailable.'}})();
+</script></html>

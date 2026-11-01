@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Judicial judgement assessment · Practice Lab</title>
+<style>
+:root {color-scheme:light;--bg:#f5f4ef;--paper:#fffefa;--text:#202f2b;--muted:#4c6158;--green:#185b4a;--mint:#e7f1ea;--line:#cbd4ca;--amber:#8b4218;--pale:#fff0dd;font:100%/1.55 system-ui,sans-serif}
+* {box-sizing:border-box}body {margin:0;color:var(--text);background:var(--bg)}
+header,main,footer {max-width:88rem;margin:auto;padding-inline:clamp(1rem,4vw,4rem)}
+header {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;padding-block:1rem;border-bottom:1px solid var(--line)}
+header strong,.eyebrow {font-size:.77rem;font-weight:750;letter-spacing:.095em;text-transform:uppercase;color:var(--green)}
+header nav,.actions {display:flex;align-items:center;flex-wrap:wrap;gap:.6rem 1rem}
+a {color:var(--green);text-underline-offset:.19em}header a {font-size:.9rem}
+button,textarea,select {font:inherit;color:var(--text)}button {border:1px solid #a9b9ad;border-radius:.42rem;padding:.48rem .9rem;background:var(--paper);cursor:pointer}
+button:hover {border-color:var(--green)}button.primary {background:var(--green);color:white;font-weight:650;border-color:var(--green)}button:disabled {opacity:.46;cursor:default}
+:focus-visible {outline:3px solid #a34818;outline-offset:2px}.skip {position:absolute;left:-9999px}.skip:focus {left:1rem;top:.2rem;padding:.5rem;background:white}
+main {padding-block:1.65rem 2.5rem}h1,h2 {font:500 clamp(2rem,5vw,3.9rem)/1.1 Georgia,serif;margin:.15em 0}
+h2 {font-size:clamp(1.65rem,3vw,2.5rem)}h3,h4 {margin:.65rem 0 .35rem}p {margin:.5rem 0}.lead {max-width:72ch;font-size:1.04rem}
+.hint,small,footer {font-size:.9rem;color:var(--muted)}.layout {display:grid;grid-template-columns:minmax(13rem,18rem) minmax(0,1fr);gap:1.45rem;align-items:start;margin-top:1.2rem}
+aside,.work {background:var(--paper);border:1px solid var(--line);border-radius:.65rem;padding:clamp(1rem,2.4vw,2rem)}aside {padding:1rem}
+aside h2 {font:700 1.07rem system-ui,sans-serif;margin-bottom:.4rem}
+progress {width:100%;height:.58rem;accent-color:var(--green)}.grid {display:grid;grid-template-columns:repeat(5,1fr);gap:.3rem;margin:.75rem 0}
+.grid button {padding:.35rem .12rem;position:relative;font-variant-numeric:tabular-nums}.grid button.answered {background:var(--mint);font-weight:700}
+.grid [aria-current=step] {border:2px solid var(--green)}.grid .mark {font-size:.67rem;color:var(--green)}.tools {display:grid;gap:.5rem;margin:1rem 0}
+#notice:not(:empty),#storage:not(:empty) {margin-top:.75rem;background:var(--pale);padding:.65rem .8rem;border-left:3px solid var(--amber)}
+.section {margin-top:1.15rem;border-top:1px solid var(--line);padding-top:.65rem}.brief {background:#f0f4ef;border-radius:.45rem;padding:.75rem 1rem;margin-top:.8rem}
+.brief h3 {margin:.1rem 0 .3rem;font-size:.98rem;color:var(--green)}ul {margin:.1rem 0;padding-left:1.3rem}.brief p,blockquote {white-space:pre-wrap}
+textarea,select {border:1px solid #8ba091;border-radius:.35rem;padding:.65rem;max-width:100%;background:white}textarea {width:100%;min-height:10rem;resize:vertical}.short {min-height:3.5rem}
+label {display:block;margin:.4rem 0 .22rem;font-weight:650}.actions {margin-top:.85rem}
+blockquote {padding:.7rem 1rem;background:var(--mint);border-left:3px solid var(--green);margin:.5rem 0}
+fieldset {margin:.7rem 0;border:1px solid var(--line);border-radius:.4rem;padding:.7rem 1rem;min-width:0}legend {font-weight:700}
+dl {display:grid;grid-template-columns:max-content 1fr;gap:.2rem .65rem;margin:.4rem 0}dt {font-weight:650}dd {margin:0}
+footer {border-top:1px solid var(--line);padding-block:1rem}p,dd,li,legend,blockquote,small {overflow-wrap:anywhere}
+@media(max-width:740px){.layout{grid-template-columns:1fr}.grid{grid-template-columns:repeat(10,1fr)}.tools{display:flex;flex-wrap:wrap}aside{padding:.85rem}}
+@media(max-width:400px){.grid{grid-template-columns:repeat(5,1fr)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to question</a>
+<header><strong>Judicial Practice Lab</strong><nav aria-label="Resources"><a href="/archive">Recorded assessments</a><a href="/studio">Decision studio</a><a href="/practice">Warm-ups</a><a href="/bank">Question bank</a><a href="/guide">Assessor guide</a><a href="/evaluation">Scoring diagnostics</a></nav></header>
+<main>
+<div class="eyebrow">Practice assessment · India</div><h1>Judgement under pressure</h1>
+<p class="lead">Work through 20 fictional hearings, one per category. Explain the order you would make, how the new information affects it, and what happens next.</p>
+<div id="notice" role="status" aria-live="polite"></div><div id="storage" role="status"></div>
+<div class="layout"><aside>
+<h2>Your question set</h2><small id="version">Opening form…</small><p id="progressText"></p>
+<progress id="progress" max="20" value="0" aria-label="Questions with an answer"></progress>
+<p id="receipt"></p><nav id="grid" class="grid" aria-label="Jump to question"></nav>
+<p class="hint" id="legend"></p>
+<div class="tools"><button id="submit" class="primary" disabled>Record 20 answers locally</button><button id="export" disabled>Export record</button><button id="new" disabled>New random form</button></div>
+<div id="prior"></div><p class="hint">Use fictional responses without names or identifying details. Drafts stay in this tab. Recording saves the complete answers on this computer for later review. You can separately choose to send a recorded assessment to OpenAI from its archive page.</p>
+</aside><article id="work" tabindex="-1" class="work" aria-label="Question workspace">Opening assessment…</article></div>
+</main><footer>Scores describe the reasoning recorded for a fictional hearing. Clinical interpretation, certification, promotion and disciplinary decisions require separate evidence and independent authority.</footer>
+<script>
+'use strict';
+const byId = id => document.getElementById(id);
+const prefix = 'judicial-assessment-v1/';
+let form, state, position = 0, working = false;
+function el(tag,text,cls) {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  if (cls) node.className=cls;
+  return node;
+}
+function button(text,fn,primary=false) {
+  const b = el('button',text,primary?'primary':''); b.type='button'; b.onclick=fn; return b;
+}
+function msg(text) { byId('notice').textContent=text; }
+function storageIssue() { byId('storage').textContent='Draft storage is unavailable or full. Keep this tab open and export your progress before leaving.'; }
+function read(key) {
+  try { return window.sessionStorage.getItem(prefix+key); }
+  catch { storageIssue(); return null; }
+}
+function save() {
+  try { window.sessionStorage.setItem(prefix+form.id,JSON.stringify(state)); window.sessionStorage.setItem(prefix+'active',form.id); }
+  catch { storageIssue(); }
+}
+function savedForms() {
+  const host=byId('prior');
+  try {
+    const keys=Object.keys(window.sessionStorage).filter(k=>k.startsWith(prefix) && k!==prefix+'active' && k!==prefix+form.id);
+    host.replaceChildren();
+    if (!keys.length) return;
+    const label=el('label','Reopen earlier form'), select=el('select');
+    select.id='saved-form'; label.htmlFor=select.id;
+    const placeholder=el('option','Choose saved form…');placeholder.value='';select.append(placeholder);
+    for(const key of keys) {
+      const saved=JSON.parse(window.sessionStorage.getItem(key)),id=key.slice(prefix.length);
+      const count=Object.values(saved.answers||{}).filter(value=>typeof value==='string' && value.trim()).length;
+      const opt=el('option',(saved.submittedAt?'Submitted':'Draft')+' · '+count+'/20 · '+id.slice(-7));opt.value=id;select.append(opt);
+    }
+    select.disabled=working;
+    select.onchange=()=>{if(select.value)load(select.value,true);};
+    host.append(label,select);
+  } catch { storageIssue(); }
+}
+function hasDraft() { return state && Object.values(state.answers).some(x=>!!x.trim()); }
+function numberAnswered() { return form.questions.filter(q=>state.answers[q.id]?.trim()).length; }
+function referred(id) { return '/api/forms/'+encodeURIComponent(id); }
+async function api(path,data) {
+  const options = data === undefined ? {} : {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)};
+  const response = await fetch(path,options);
+  let out;
+  try {out=await response.json();} catch {throw Error('The service returned an unreadable response. Please retry.');}
+  if (!response.ok || out.error) {const e=Error(out.error||'The request failed. Please retry.');e.status=response.status;throw e;}
+  return out;
+}
+function validateForm(f) {
+  if (!f || !f.id || !f.version || !Array.isArray(f.questions) || f.questions.length!==20 ||
+      new Set(f.questions.map(q=>q.id)).size!==20 || f.questions.some(q=>!q.id||!q.title||!q.category||!q.task)) throw Error('The form is incomplete.');
+}
+function blank(f) { return {version:f.version,position:0,answers:{},keys:null,submittedAt:null,submissionId:null,attemptId:null,human:{},model:{}}; }
+function install(f,restore) {
+  validateForm(f);
+  let s=blank(f);
+  if (restore) {
+    const saved=read(f.id);
+    if (saved) {
+      try {const previous=JSON.parse(saved); if (previous.version!==f.version || !previous.answers || !previous.human || !previous.model) throw Error();s=previous;}
+      catch {throw Error('This tab has a draft for another form version or a damaged draft. It has been preserved. Open a fresh form to continue.');}
+    }
+  }
+  form=f; state=s; position=Math.max(0,Math.min(19,Number(s.position)||0));
+  const url=new URL(location.href);url.searchParams.set('form',form.id);history.replaceState(null,'',url);
+  save();
+}
+function menu() {
+  if (!form) return;
+  const count=numberAnswered(), submitted=!!state.submittedAt;
+  byId('progress').value=count;
+  byId('progressText').textContent=submitted?'All answers locked · '+Object.values(state.human).filter(x=>x.committedAt).length+' of 20 human reviews committed':count+' of 20 answered';
+  byId('version').textContent='Version '+form.version+' · 20 categories';
+  byId('legend').textContent=submitted?'✓ indicates a committed human review.':'✓ indicates an answer is present.';
+  const grid=byId('grid');grid.replaceChildren();
+  form.questions.forEach((q,i)=>{
+    const marked=submitted?!!state.human[q.id]?.committedAt:!!state.answers[q.id]?.trim();
+    const b=button(String(i+1),()=>go(i));
+    if(marked){b.className='answered';b.append(el('span',' ✓','mark'));}
+    b.setAttribute('aria-label','Question '+(i+1)+', '+q.category+(marked?(submitted?', reviewed':', answered'):''));
+    b.setAttribute('aria-current',position===i?'step':'false');b.disabled=working;grid.append(b);
+  });
+  const receipt=byId('receipt');receipt.replaceChildren();
+  if(state.submissionId) {
+    const link=el('a','Open recorded answers and frontier review');link.href='/archive?id='+encodeURIComponent(state.submissionId);
+    receipt.append(el('strong','Saved locally'),el('br'),el('small','Receipt '+state.submissionId),el('br'),link);
+  } else if(submitted) receipt.append(el('small','This earlier submission is available in your tab. Record it to receive an archive receipt.'));
+  byId('submit').disabled=!!state.submissionId||working||count!==20;byId('submit').textContent=state.submissionId?'Recorded locally':working?'Please wait…':'Record 20 answers locally';
+  byId('new').disabled=working;byId('export').disabled=false;savedForms();
+}
+function go(i) {
+  if(working || i<0 || i>=form.questions.length) return;
+  position=i;state.position=i;save();msg('');render();byId('work').focus();
+}
+function showRecord(parent,heading,content) {
+  const b=el('section',undefined,'brief');b.append(el('h3',heading));
+  if(Array.isArray(content)){const list=el('ul');for(const line of content)list.append(el('li',line));b.append(list);}
+  else b.append(el('p',content));
+  parent.append(b);
+}
+function initReview(q) {
+  if (!state.human[q.id]) state.human[q.id]={rows:state.keys[q.id].map(()=>({rating:'',reason:''})),committedAt:null};
+  return state.human[q.id];
+}
+function valid(row) {return ['0','1','2','unassessable'].includes(row.rating)&&!!row.reason.trim();}
+function humanReview(w,q) {
+  const review=initReview(q), rubrics=state.keys[q.id], section=el('section',undefined,'section');
+  section.append(el('div','Assessor workspace','eyebrow'),el('h3',review.committedAt?'Committed human review':'Optional human review'));
+  section.append(el('p','This optional worksheet stays in this tab and in your export. Open the archive receipt to request a model review at any time. Assess the reasoning against each anchor. Quote or identify the concrete action behind your rating. A defensible alternative outcome can earn full credit.','hint'));
+  const commit=button('Commit human review',()=>{
+    if(!review.rows.every(valid))return;
+    review.committedAt=new Date().toISOString();save();render();msg('Human review committed for question '+(position+1)+'.');
+  },true);
+  for(const [i,k] of rubrics.entries()){
+    const row=review.rows[i],box=el('fieldset');box.append(el('legend',k.name));
+    const dl=el('dl');for(const [n,a] of [[0,k.zero],[1,k.one],[2,k.two]])dl.append(el('dt',String(n)),el('dd',a));box.append(dl);
+    if(review.committedAt){box.append(el('strong',row.rating==='unassessable'?'Insufficient basis':'Human rating · '+row.rating+' of 2'),el('blockquote',row.reason));}
+    else {
+      const label=el('label','Human rating'),sel=el('select');sel.id='rating-'+i;label.htmlFor=sel.id;
+      for(const [v,t] of [['','Select…'],['0','0'],['1','1'],['2','2'],['unassessable','Insufficient basis']]){
+        const o=el('option',t);o.value=v;sel.append(o);
+      }
+      sel.value=row.rating;
+      const label2=el('label','Evidence and rationale'),why=el('textarea',undefined,'short');why.id='rationale-'+i;label2.htmlFor=why.id;why.value=row.reason;why.maxLength=3000;
+      function change(){row.rating=sel.value;row.reason=why.value;save();commit.disabled=!review.rows.every(valid);}
+      sel.onchange=change;why.oninput=change;box.append(label,sel,label2,why);
+    }
+    section.append(box);
+  }
+  if(!review.committedAt){commit.disabled=!review.rows.every(valid);section.append(commit);}
+  w.append(section);
+}
+function render() {
+  if(!form)return;
+  menu();const w=byId('work'),q=form.questions[position];w.replaceChildren();
+  w.append(el('div','Question '+(position+1)+' / 20 · '+q.category,'eyebrow'),el('h2',q.title));
+  showRecord(w,'Case record',q.record);showRecord(w,'Decision facing the bench',q.decision);showRecord(w,'Development',q.development);
+  const s=el('section',undefined,'section');s.append(el('h3','Your task'),el('p',q.task));
+  if(!state.submittedAt){
+    const label=el('label','Your response'),answer=el('textarea');label.htmlFor='answer';answer.id='answer';answer.maxLength=10000;answer.value=state.answers[q.id]||'';answer.disabled=working;
+    answer.oninput=()=>{state.answers[q.id]=answer.value;save();menu();};
+    s.append(label,answer,el('small','Draft until you submit all 20. Reference the record and make your direction precise.'));
+  } else s.append(el('h4','Submitted response'),el('blockquote',state.answers[q.id]));
+  w.append(s);
+  const nav=el('div',undefined,'actions'),prev=button('Previous question',()=>go(position-1)),next=button('Next question',()=>go(position+1));
+  prev.disabled=working||position===0;next.disabled=working||position===19;nav.append(prev,next);w.append(nav);
+  if(state.submittedAt)humanReview(w,q);
+}
+byId('submit').onclick=async()=>{
+  if(working || numberAnswered()!==20 || state.submissionId || !confirm('Record and lock all 20 answers in the local archive? No response is sent to OpenAI by this action.'))return;
+  if(!state.attemptId){state.attemptId=crypto.randomUUID();save();}
+  working=true;render();msg('');
+  try{
+    const data=await api(referred(form.id)+'/review',{answers:state.answers,attemptId:state.attemptId}),keys={};
+    if(!data.submissionId||!Array.isArray(data.items)||data.items.length!==20)throw Error('Incomplete assessor guide.');
+    for(const item of data.items){if(!Array.isArray(item.criteria)||!item.criteria.length)throw Error('Missing criteria.');keys[item.id]=item.criteria;}
+    if(form.questions.some(q=>!keys[q.id]))throw Error('Missing questions in assessor guide.');
+    state.keys=keys;state.submittedAt=state.submittedAt||new Date().toISOString();state.submissionId=data.submissionId;
+    save();msg('All 20 answers were recorded locally. Your receipt opens the saved responses and the optional frontier review.');
+  }catch(e){
+    if(e.status===409){
+      msg('This attempt already has a record with different answers. Your draft is preserved. Open Recorded assessments to inspect it.');
+      const retry=button('Create a separate attempt',()=>{
+        if(!confirm('Use a new attempt ID for these answers? The earlier record will remain in the archive.'))return;
+        state.attemptId=crypto.randomUUID();save();msg('New attempt prepared. Choose Record 20 answers locally to save it.');
+      });
+      byId('notice').append(el('br'),retry);
+    }else msg(e.message+' Your answers are still available. Use the same button to retry.');
+  }
+  finally{working=false;render();}
+};
+byId('export').onclick=()=>{
+  if(!form)return;
+  const out={formatVersion:2,archiveReceipt:state.submissionId||null,form:form.id,version:form.version,exportedAt:new Date().toISOString(),submittedAt:state.submittedAt,
+    items:form.questions.map(q=>{
+      const h=state.human[q.id];return {...q,answer:state.answers[q.id]?.trim()?state.answers[q.id]:null,
+        criteria:state.keys?.[q.id]||null,human:h?{...h,rows:h.rows.map(x=>({...x,rating:x.rating===''?null:x.rating==='unassessable'?x.rating:Number(x.rating)}))}:null,
+        model:state.model[q.id]||null};
+    })};
+  const url=URL.createObjectURL(new Blob([JSON.stringify(out,null,2)],{type:'application/json'}));const a=el('a');
+  a.href=url;a.download='judicial-form-'+form.id+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  msg('Exported this form, its answers, and available review evidence.');
+};
+async function load(id,restore) {
+  if(working)return;
+  working=true;byId('new').disabled=true;render();msg('');
+  try {
+    const f=await api(id?referred(id):'/api/forms',id?undefined:{});
+    install(f,restore);
+  }catch(e){
+    msg(e.message+' Earlier drafts have been kept.');
+    if(!form)byId('work').textContent='Retry this form by refreshing, or generate a new form.';
+  }finally{working=false;byId('new').disabled=false;render();}
+}
+byId('new').onclick=()=>{
+  if(working)return;
+  if(hasDraft()&&!confirm('Start a new random form? This tab will retain your existing draft by its form URL. Export it first if you want a permanent copy.'))return;
+  load(null,false);
+};
+const requested=new URL(location.href).searchParams.get('form')||read('active');
+load(requested,!!requested);
+</script>
+</body>
+</html>

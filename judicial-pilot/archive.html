@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Recorded assessments · Judicial Practice Lab</title>
+<style>
+:root{color-scheme:light;--ink:#1e302a;--muted:#496158;--edge:#c2cec4;--paper:#fffefa;--green:#165744;--mint:#e7f1e9;--amber:#fff0df;font:100%/1.55 system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:#f4f4ee;color:var(--ink)}
+a{color:var(--green);text-underline-offset:.18em}header,main,footer{max-width:88rem;margin:auto;padding-inline:clamp(1rem,4vw,4rem)}
+header{border-bottom:1px solid var(--edge);display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;padding-block:1rem}
+header strong,.eyebrow{color:var(--green);font-size:.77rem;font-weight:750;text-transform:uppercase;letter-spacing:.09em}
+main{padding-block:1.65rem 3rem}h1,h2{font:500 clamp(2.4rem,5vw,4rem)/1.12 Georgia,serif;margin:.15em 0}
+h2{font-size:clamp(1.6rem,3vw,2.25rem)}h3,h4,p{margin:.6rem 0}
+button,select{font:inherit;color:var(--ink);background:white;border:1px solid #93aa9c;border-radius:.4rem;padding:.48rem .8rem}
+button{cursor:pointer}button:disabled{opacity:.55;cursor:default}button.primary{background:var(--green);color:white;font-weight:650}
+.actions,header nav,.tags{display:flex;align-items:center;gap:.6rem 1rem;flex-wrap:wrap}
+header a,small,.hint,footer{font-size:.9rem;color:var(--muted)}
+.lead{max-width:77ch}.layout{display:grid;grid-template-columns:minmax(13rem,18rem) minmax(0,1fr);gap:1.25rem;margin-top:1.1rem;align-items:start}
+aside,article{border:1px solid var(--edge);border-radius:.6rem;background:var(--paper);padding:clamp(1rem,2.4vw,1.7rem)}
+aside{padding:1rem}aside h2{font:700 1rem system-ui,sans-serif}.list{display:grid;gap:.55rem;margin:.6rem 0}
+.card{display:block;border:1px solid var(--edge);padding:.6rem .7rem;border-radius:.4rem;text-decoration:none}.card[aria-current=page]{border-color:var(--green);background:var(--mint)}
+.tag{background:var(--mint);font-size:.83rem;padding:.17rem .5rem;border-radius:.25rem}
+.section{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--edge)}
+.callout{background:var(--amber);padding:.8rem 1rem;border-left:3px solid #9a4c23;margin:1rem 0}
+select{max-width:100%}#itemlabel{display:block;margin-bottom:.25rem;font-weight:650}
+blockquote{white-space:pre-wrap;background:var(--mint);border-left:3px solid var(--green);padding:.6rem .8rem;margin:.4rem 0}
+details{margin:.6rem 0;background:#f2f5ef;padding:.55rem .8rem;border:1px solid var(--edge);border-radius:.4rem}
+summary{cursor:pointer;font-weight:650}#notice:not(:empty){margin-top:.8rem;padding:.55rem .7rem;background:var(--amber)}
+footer{border-top:1px solid var(--edge);padding-block:1rem} :focus-visible{outline:3px solid #a34818;outline-offset:2px}
+p,small,a,blockquote,button,summary,li{overflow-wrap:anywhere} .skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:0;background:white}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.list{max-height:12rem;overflow:auto}}
+</style></head>
+<body>
+<a class="skip" href="#file">Skip to recorded answers</a>
+<header><strong>Judicial Practice Lab</strong><nav aria-label="Resources"><a href="/archive">Archive index</a><a href="/">Take assessment</a><a href="/bank">Question bank</a><a href="/studio">Decision studio</a></nav></header>
+<main><div class="eyebrow">Local archive</div><h1>Recorded assessments</h1>
+<p class="lead">Each receipt preserves the questions and the answers recorded on this computer. Open one to read the responses, export a copy or request a frontier model review.</p>
+<div class="actions"><button id="refresh" type="button">Refresh records</button><small id="asof"></small></div>
+<div id="notice" role="status" aria-live="polite"></div>
+<div class="layout"><aside><h2>Receipts</h2><nav id="receipts" class="list" aria-label="Saved assessments"></nav></aside>
+<article id="file" tabindex="-1" aria-label="Recorded answers and review">Loading archive…</article></div>
+</main><footer>For fictional judicial education exercises. Model ratings describe the reasoning in individual answers. They have no validated interpretation for appointment, promotion, diagnosis or discipline.</footer>
+<script>
+'use strict';
+const byId=id=>document.getElementById(id);
+const selected=new URL(location.href).searchParams.get('id');
+let archive=null, detail=null, pos=0, busy=false, timer;
+function el(tag,text,cls){
+  const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;
+}
+function button(text,fn,primary=false){
+  const b=el('button',text,primary?'primary':'');b.type='button';b.onclick=fn;return b;
+}
+function say(message){byId('notice').textContent=message;}
+function route(){return '/api/submissions/'+encodeURIComponent(selected);}
+function localTime(date){const d=new Date(date);return isNaN(d.getTime())?String(date):d.toLocaleString();}
+async function api(url,post=false){
+  const options=post?{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'}:{};
+  const res=await fetch(url,options);
+  let data;try{data=await res.json();}catch{throw Error('Unreadable service response.');}
+  if(!res.ok||data.error)throw Error(data.error||'Request failed. Please refresh and retry.');
+  return data;
+}
+function counts(items){
+  const result={unreviewed:0,queued:0,running:0,complete:0,failed:0};
+  for(const item of items)if(Object.hasOwn(result,item.state))result[item.state]++;
+  return result;
+}
+function receipts(){
+  const list=byId('receipts');list.replaceChildren();
+  for(const record of archive.submissions){
+    const a=el('a',undefined,'card');a.href='/archive?id='+encodeURIComponent(record.id);
+    a.setAttribute('aria-current',selected===record.id?'page':'false');
+    a.append(el('strong',localTime(record.created)),el('br'),el('small',record.id.slice(0,8)+' · '+(record.counts?.complete??0)+'/20 reviewed'));list.append(a);
+  }
+  if(!archive.submissions.length)list.append(el('p','No local receipts yet.','hint'));
+}
+function exportDetail(){
+  if(!detail)return;
+  const out={formatVersion:1,exportedAt:new Date().toISOString(),submission:detail};
+  const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+  const href=URL.createObjectURL(blob),a=el('a');a.href=href;a.download='judicial-receipt-'+detail.id+'.json';
+  document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(href),1000);
+  say('Exported the recorded answers and the currently saved review evidence.');
+}
+function field(parent,heading,content){
+  if(content==null||content==='')return;
+  parent.append(el('h4',heading));
+  if(Array.isArray(content)){const ul=el('ul');for(const t of content)ul.append(el('li',t));parent.append(ul);}
+  else parent.append(el('p',String(content)));
+}
+function review(panel,item){
+  const res=item.review;
+  const r=el('section',undefined,'section');r.append(el('div','Frontier reviewer','eyebrow'),el('h3',res?'Criterion ratings':'Review status · '+item.state));
+  if(!res){
+    if(item.error)r.append(el('p',String(item.error),'callout'));
+    if(item.state==='unreviewed')r.append(el('p','The answer is recorded locally. No frontier review has been requested for this question.','hint'));
+    panel.append(r);return;
+  }
+  r.append(el('p',String(res.model)+' · '+localTime(res.reviewedAt),'hint'));
+  res.ratings.forEach((x,i)=>{
+    const k=item.criteria?.[i],b=el('section',undefined,'section');
+    b.append(el('h4',(k?.name||'Criterion '+(i+1))+' · '+(x.score===null?'Insufficient basis':x.score+'/2')));
+    const evidence=Array.isArray(x.evidence)&&x.evidence.length?x.evidence:(x.quote?[x.quote]:[]);
+    if(!evidence.length)b.append(el('p','No supporting passage cited.','hint'));
+    for(const passage of evidence)b.append(el('blockquote',passage));
+    if(x.conflict){b.append(el('strong','Conflicting passage'),el('blockquote',x.conflict));}
+    b.append(el('p',x.feedback));r.append(b);
+  });
+  const d=el('details');d.append(el('summary','Review provenance'));
+  field(d,'Response ID',res.responseId);field(d,'Prompt version',res.promptVersion);
+  r.append(d);panel.append(r);
+}
+function renderItem(){
+  const target=byId('answer-section'),item=detail.items[pos],q=item.question;
+  target.replaceChildren();target.append(el('div','Question '+(pos+1)+' · '+q.category,'eyebrow'),el('h2',q.title));
+  const d=el('details');d.append(el('summary','Read the question and its anchors'));
+  for(const [heading,val] of [['Record',q.record],['Decision',q.decision],['Development',q.development],['Task',q.task]])field(d,heading,val);
+  for(const k of item.criteria||[])field(d,k.name,['0 · '+k.zero,'1 · '+k.one,'2 · '+k.two]);
+  target.append(d,el('h3','Recorded answer'),el('blockquote',item.answer));review(target,item);
+}
+function renderDetail(){
+  const w=byId('file');w.replaceChildren();
+  if(!detail){
+    w.append(el('h2',archive.submissions.length?'Choose a receipt':'No assessments recorded'),
+      el('p',archive.submissions.length?'Select an entry from the receipts list to inspect its answers and reviews.':'Complete a 20-question assessment and choose “Record 20 answers locally” to create your first receipt.'));
+    return;
+  }
+  const c=counts(detail.items),active=c.queued+c.running,eligible=c.failed+c.unreviewed;
+  w.append(el('div','Receipt · '+detail.id,'eyebrow'),el('h2','Assessment of '+localTime(detail.created)),el('p','Bank '+detail.version+' · '+detail.items.length+' recorded answers','hint'));
+  const tags=el('div',undefined,'tags');
+  for(const k of ['unreviewed','queued','running','complete','failed'])tags.append(el('span',c[k]+' '+k,'tag'));
+  w.append(tags);
+  const box=el('section',undefined,'callout');
+  box.append(el('h3','Optional external review'));
+  const model=detail.model||archive.reviewer?.model||'gpt-6-astra',configured=archive.reviewer?.configured;
+  const target='OpenAI ('+model+')';
+  box.append(el('p','Sending a request transmits the eligible fictional questions, scoring criteria and recorded answers to '+target+'. Returned ratings, evidence and feedback are saved with this receipt. Completed items are skipped.'));
+  const send=button('Send '+eligible+' eligible answers to '+target,async()=>{
+    if(busy || !eligible || active || !configured)return;
+    if(!confirm('Send '+eligible+' eligible questions, criteria and recorded answers from this receipt to '+target+' now? This is an external API request. Completed reviews will be kept.'))return;
+    clearTimeout(timer);busy=true;byId('refresh').disabled=true;send.disabled=true;
+    try{await api(route()+'/frontier',true);say('Frontier review requested. Checking saved item states.');}
+    catch(e){say('Could not confirm the request. '+e.message+' Check the saved state before retrying.');}
+    finally{busy=false;await refresh(false);}
+  },true);
+  send.disabled=busy||!configured||!eligible||active>0;
+  box.append(send);
+  if(!configured)box.append(el('p','Frontier requests are unavailable until OpenAI API access is configured on the local server.','hint'));
+  else if(active)box.append(el('p','Work is in progress. This view checks for changes while processing continues.','hint'));
+  else if(!eligible)box.append(el('p','Every answer already has a saved review.','hint'));
+  else if(c.failed)box.append(el('p','Failed items can be retried. Inspect their saved errors below.','hint'));
+  const actions=el('div',undefined,'actions');actions.append(button('Export answers and reviews',exportDetail));
+  const replay=el('a','Reopen question form');replay.href='/?form='+encodeURIComponent(detail.formId);actions.append(replay);w.append(box,actions);
+  const choice=el('section',undefined,'section'),label=el('label','Choose a recorded answer'),select=el('select');
+  label.id='itemlabel';label.htmlFor='item';select.id='item';detail.items.forEach((item,i)=>{
+    const option=el('option',(i+1)+'. '+item.question.title+' · '+item.state);option.value=String(i);select.append(option);
+  });
+  select.value=String(pos);select.onchange=()=>{pos=Number(select.value);renderItem();};
+  choice.append(label,select);w.append(choice);
+  const panel=el('section',undefined,'section');panel.id='answer-section';w.append(panel);renderItem();
+}
+function schedule(){
+  clearTimeout(timer);
+  if(document.hidden)return;
+  const active=selected ? detail?.items.some(i=>i.state==='queued'||i.state==='running') :
+    archive?.submissions.some(r=>(r.counts?.queued||0)+(r.counts?.running||0)>0);
+  if(active)timer=setTimeout(()=>refresh(false),4000);
+}
+async function refresh(manual=true){
+  if(busy)return;
+  if(manual)say('');
+  clearTimeout(timer);busy=true;byId('refresh').disabled=true;
+  try{
+    const [index,data]=await Promise.all([api('/api/submissions'),selected?api(route()):Promise.resolve(null)]);
+    const changed = !archive || JSON.stringify(archive.reviewer)!==JSON.stringify(index.reviewer) ||
+      JSON.stringify(detail)!==JSON.stringify(data) || (!selected && archive.submissions.length!==index.submissions.length);
+    archive=index;detail=data;receipts();if(changed)renderDetail();
+    byId('asof').textContent='Checked at '+new Date().toLocaleTimeString();schedule();
+  }catch(e){say(e.message+' Refresh to check again.');if(!archive)byId('file').textContent='The archive could not be loaded.';}
+  finally{busy=false;byId('refresh').disabled=false;
+    if(detail){const send=byId('file').querySelector('button.primary'),c=counts(detail.items);
+      if(send)send.disabled=!archive.reviewer?.configured||!(c.failed+c.unreviewed)||!!(c.queued+c.running);}
+  }
+}
+byId('refresh').onclick=()=>refresh(true);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)clearTimeout(timer);else schedule();});
+refresh();
+</script>
+</body></html>
