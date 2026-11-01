@@ -104,6 +104,21 @@ class ArchiveTests(unittest.TestCase):
         self.assertTrue(all(i["state"] == "complete" for i in stored))
         self.assertEqual(self.archive.enqueue(self.attempt), 0)
 
+    def test_interrupted_review_is_retained_for_explicit_retry(self):
+        self.save()
+        self.archive.enqueue(self.attempt)
+        with self.archive.db() as db:
+            db.execute("UPDATE items SET state='running' WHERE submission=? AND position=0", (self.attempt,))
+        self.archive.file_lock.close()
+        reopened = Archive(self.directory)
+        self.addCleanup(reopened.file_lock.close)
+        record = reopened.get(self.attempt)
+        self.assertEqual(record["items"][0]["state"], "failed")
+        self.assertIn("restarted", record["items"][0]["error"])
+        self.assertIsNone(record["items"][0]["review"])
+        self.assertTrue(all(i["state"] == "queued" for i in record["items"][1:]))
+        self.assertEqual(record["items"][0]["answer"], self.answers[self.form["questions"][0]["id"]])
+
 
 class FrontierTests(unittest.TestCase):
     def setUp(self):
@@ -148,6 +163,32 @@ class FrontierTests(unittest.TestCase):
         for parts in ([], [{"type": "refusal", "refusal": "No review."}]):
             with self.subTest(parts=parts), self.assertRaises(ValueError):
                 self.score(content=parts)
+
+
+class CredentialTests(unittest.TestCase):
+    def test_only_explicit_openai_token_is_loaded(self):
+        with tempfile.TemporaryDirectory() as temp, patch.dict(os.environ, {}, clear=True):
+            path = Path(temp) / "key-fixture.md"
+            token = "sk-" + "a" * 25
+            path.write_text("Other provider sk-ant-" + "b" * 25 + "\nOpenAI: " + token)
+            frontier.load_key_file(path)
+            self.assertEqual(os.environ["OPENAI_API_KEY"], token)
+
+    def test_existing_environment_takes_precedence(self):
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-existing"}):
+            frontier.load_key_file(Path("/nonexistent-key-file"))
+            self.assertEqual(os.environ["OPENAI_API_KEY"], "test-existing")
+
+    def test_ambiguous_or_unlabelled_key_is_rejected(self):
+        token = "sk-" + "a" * 25
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "key-fixture.md"
+            for text in (token, "OpenAI: " + token + "\nOpenAI: sk-" + "b"*25):
+                with patch.dict(os.environ, {}, clear=True):
+                    path.write_text(text)
+                    with self.assertRaises(ValueError):
+                        frontier.load_key_file(path)
+                    self.assertNotIn("OPENAI_API_KEY", os.environ)
 
 
 if __name__ == "__main__":

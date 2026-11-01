@@ -35,6 +35,17 @@ def now():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def load_key_file(path):
+    """Use only an explicitly labelled OpenAI entry, never another provider's token."""
+    if configured():
+        return
+    pattern = r"(?im)^.*?\bopenai\b[^\n]*?\n?[^\w\n]*(sk-(?!ant-|or-)[A-Za-z0-9_-]{20,})(?![A-Za-z0-9_-])"
+    keys = set(re.findall(pattern, path.read_text()))
+    if len(keys) != 1:
+        raise ValueError("Expected exactly one labelled OpenAI key in the requested local file.")
+    os.environ["OPENAI_API_KEY"] = keys.pop()
+
+
 def configured():
     return bool(os.environ.get("OPENAI_API_KEY", "").strip())
 
@@ -53,7 +64,17 @@ def review(item):
         with urlopen(req, timeout=240) as resp:
             result = json.load(resp)
     except HTTPError as exc:
-        raise RuntimeError(f"OpenAI returned HTTP {exc.code}. Check model access, credentials or quota before retrying.") from None
+        try:
+            with exc:
+                code = json.loads(exc.read(32768))["error"]["code"]
+        except (TypeError, ValueError, KeyError):
+            code = None
+        advice = {
+            "insufficient_quota": "The API project has insufficient quota. Check billing or project limits before retrying.",
+            "rate_limit_exceeded": "The API rate limit was reached. Wait before retrying.",
+            "model_not_found": "This project cannot access the requested model.",
+        }.get(code if isinstance(code, str) else "", "Check model access, credentials or quota before retrying.")
+        raise RuntimeError(f"OpenAI returned HTTP {exc.code}. {advice}") from None
     model = result.get("model", "")
     if model != MODEL and not model.startswith(MODEL + "-"):
         raise ValueError("Provider did not confirm requested frontier model")

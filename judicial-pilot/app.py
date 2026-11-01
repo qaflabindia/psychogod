@@ -282,8 +282,11 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--port", type=int, default=8765)
+    parser.add_argument("--port", type=int, default=8876)
+    parser.add_argument("--openai-key-file", type=Path, help="Local file containing a labelled OpenAI key")
     args = parser.parse_args()
+    if args.openai_key_file:
+        frontier.load_key_file(args.openai_key_file)
     server = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
     server.bank = json.loads((ROOT / "bank.json").read_text())
     server.labs = json.loads((ROOT / "labs.json").read_text())

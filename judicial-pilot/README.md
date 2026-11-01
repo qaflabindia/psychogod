@@ -1,6 +1,6 @@
 # Judicial Practice Lab
 
-Start the app with `python3 -B app.py` in this directory and open http://localhost:8765/. Python's standard library is sufficient. Use fictional, de-identified responses on a trusted single-user computer. The app listens on loopback. Anyone with access to its local archive can read the submissions.
+Start the app with `python3 -B app.py` in this directory and open http://127.0.0.1:8876/. Python's standard library is sufficient. Use fictional, de-identified responses on a trusted single-user computer. The app listens on loopback. Anyone with access to its local archive can read the submissions.
 
 ## Assessment, recording and review
 
@@ -16,3 +16,9 @@ Start the app with `python3 -B app.py` in this directory and open http://localho
 Run `python3 -B -m unittest discover -v` from this directory. Tests use temporary storage and simulated frontier responses. An actual OpenAI review requires network access, a configured API account with model access and a participant's explicit send action. The pilot has no validated pass score. Its output supports discussion of decisions in fictional cases. A national certification or personnel use would require separate authority and validation.
 
 [OpenAI model guide](https://developers.openai.com/api/docs/guides/latest-model) · [Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs)
+
+## Live acceptance check
+
+To run the app with an ignored local credential file, use `python3 -B app.py --openai-key-file secret/keys.md`. A configured OPENAI_API_KEY takes precedence. The file must identify the OpenAI key explicitly. The server reads it at startup and never serves it as a browser asset.
+
+Run `python3 -B check_live_review.py --openai-key-file secret/keys.md` to send up to two billable fictional responses to the configured frontier reviewer. The check compares a withdrawn pension order and an enforceable one against predeclared effective-remedy ratings of 0 and 2. It exits unsuccessfully if the provider cannot return a verified rating or the ratings miss those expectations. Passing this pair alone does not establish psychometric validity.

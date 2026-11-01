@@ -46,3 +46,18 @@ The proposed six-month evaluation can use month 1 for benchmark construction and
 A second local scorer selected numbered passages and was explicitly instructed to evaluate the operative direction, handle withdrawals and withhold credit for merely repeating a criterion. On the same J08 texts, it again assigned full marks to the rubric echo. The directly usable interim order received 2/0/2. The explicitly withdrawn order received 1/0/2. Selecting passages reliably identifies words the author actually wrote. It cannot establish whether a quoted direction survived the final disposal. We therefore keep these local experiments distinct from the formal recorded review and show no overall competence score. The formal GPT-6 Astra reviewer needs an independent, blinded evaluation of this failure mode on held-out cases.
 
 Randomising variants reduces predictability but does not demonstrate validity. There are 200 distinct base cases across all categories and families of variants share evidence and wording. Hold out entire base cases, not random siblings of the same case, for psychometric evaluation. Compare forms for difficulty and rater agreement before interpreting differences between participants.
+
+## Frontier acceptance run — 1 November 2026
+
+The live OpenAI Responses API subsequently completed the two predeclared pension probes in `check_live_review.py`, using `gpt-6-astra` with high reasoning effort. Earlier attempts returned HTTP 429 and produced no scores. The later successes establish that the endpoint and credential can complete this request; the cause of the earlier failures remains unconfirmed.
+
+| Probe | Responsibility | Contrary material | Effective remedy | Expected effective remedy |
+|---|---|---|---|---|
+| Expressly withdrawn protective directions, followed by indefinite referral and closure | 0 | Insufficient basis | 0 | 0 |
+| Assigned decision-maker, time-bound sanction and payment, disputed-match hearing and return on default | 2 | 2 | 2 | 2 |
+
+The withdrawn-order response ID was `resp_03441b69c74f8bc4016ae6b6b2d51087d2ace27e25d698c655`. The enforceable-order response ID was `resp_04cb4219227804cb016ae6b6d4118887d2a40191a48d7e2970`. The check completed with exit status zero. Its exact inputs and expected effective-remedy ratings are retained in the acceptance script. These are two deliberately contrasting fictional answers to one question. They establish this acceptance condition only; they do not establish reliability across the 4,000 variants, equivalent difficulty between forms, or clinical validity.
+
+The automated suite now has 21 passing tests. It covers balanced selection, exact replay, duplicate submissions, conflicting retries, reopening the archive, interrupted review, successful completion of a 20-answer batch using a simulated provider, quota failure with preserved answers, unsupported evidence and wrong-model rejection. Browser checks completed a disposable 20-answer form, restored its draft after reload, saved the response receipt and reopened its first answer. Those browser submissions used a temporary archive.
+
+The default local port is now 8876 because port 8765 was occupied by another application. The live app was reopened and verified at http://127.0.0.1:8876/.
